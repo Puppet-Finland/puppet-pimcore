@@ -4,7 +4,17 @@
 #
 # @example
 #   include pimcore::params
-class pimcore::params {
+class pimcore::params (
+
+  Optional[Stdlib::Absolutepath] $docroot = '/var/www/html/pimcore',
+  Optional[Stdlib::Port] $port            = 80,
+  Optional[String] $php_version           = '8.0',
+  Optional[Hash] $php_settings            = {
+   'Date/date.timezone' => 'Europe/Helsinki',
+   'PHP/memory_limit'   => '512M',
+  },
+
+){
   #include ::os::params
 
   case $::osfamily {

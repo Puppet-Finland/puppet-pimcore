@@ -3,12 +3,13 @@
 # A description of what this class does
 #
 # @example
-#   include pimcore::db
-class pimcore::db (
+#   pimcore::db { 'dbname':
+#   }
+define pimcore::db (
   String $user,
-  String $name,
   Variant[String, Sensitive[String]] $password,
   Enum['absent', 'present'] $ensure = 'present',
+  String $dbname                    = $name,
   String $host                      = '127.0.0.1',
   Array  $grant                     = ['ALL'],
 ){
