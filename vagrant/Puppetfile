@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+forge "https://forgeapi.puppetlabs.com"
+
+mod 'puppetlabs/vcsrepo', '5.0.0'
+mod 'saz/timezone', '6.1.0'
+mod 'petems/swap_file', '4.0.2'
+mod 'puppet/systemd', '3.5.1'
+mod 'saz/sudo', '7.0.2'
+mod 'puppetlabs/stdlib', '8.1.0'
+mod 'ssh',
+  git: 'https://github.com/ghoneycutt/puppet-module-ssh.git',
+  ref: '7b678c56a13507faa1b3e4b9085650a347a6a3eb'
+mod 'os',
+  git: 'https://github.com/Puppet-Finland/puppet-os.git',
+  ref: '5b6e05c2cd26c0ba06d63e9839662d612dcb65c6'
+mod 'packetfilter',
+  git: 'https://github.com/Puppet-Finland/puppet-packetfilter.git',
+  ref: 'cb3ca18ebbce594bd7e527999390c0137daf3a57'
+mod 'puppetlabs/mailalias_core', '1.1.0'
+mod 'saz/locales', '3.1.0'
+mod 'puppetlabs/inifile', '5.2.0'
+mod 'puppetlabs/git', '0.5.0'
+mod 'puppetlabs/firewall', '3.3.0'
+mod 'stm/debconf', '4.1.0'
+mod 'puppetlabs/cron_core', '1.1.0'
+mod 'puppetlabs/concat', '7.1.1'
+mod 'puppet/archive', '6.0.2'
+mod 'puppet/php', '8.0.2'
+mod 'puppetlabs/apache', '7.0.0'
+mod 'puppetlabs/mysql', '12.0.1'
+mod 'puppetlabs/apt', '8.3.0'
+mod 'puppetlabs/accounts', '7.1.1'
+mod 'puppet-alternatives', '4.0.0'

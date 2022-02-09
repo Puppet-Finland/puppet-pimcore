@@ -1,0 +1,1786 @@
+[0;36mDebug: Runtime environment: puppet_version=6.26.0, ruby_version=2.5.9, run_mode=user, default_encoding=UTF-8[0m
+[0;36mDebug: Loading external facts from /home/vagrant/.puppetlabs/opt/puppet/cache/facts.d[0m
+[0;36mDebug: Facter: loading external fact directories from config file[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/swap_file/lib/facter/swapfile_sizes.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/swap_file/lib/facter/swapfile_sizes_csv.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/systemd/lib/facter/systemd.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/vcsrepo/lib/facter/vcsrepo_svn_ver.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/sudo/lib/facter/sudoversion.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/stdlib/lib/facter/root_home.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/stdlib/lib/facter/service_provider.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/stdlib/lib/facter/pe_version.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/stdlib/lib/facter/package_provider.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/stdlib/lib/facter/puppet_settings.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/git/lib/facter/git_version.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/git/lib/facter/git_exec_path.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/git/lib/facter/git_html_path.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/firewall/lib/facter/iptables_persistent_version.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/firewall/lib/facter/iptables_version.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/firewall/lib/facter/ip6tables_version.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/archive/lib/facter/archive_windir.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/php/lib/facter/phpversion.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/mysql/lib/facter/mysql_server_id.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/mysql/lib/facter/mysqld_version.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/mysql/lib/facter/mysql_version.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/apt/lib/facter/apt_updates.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/apt/lib/facter/apt_update_last_success.rb[0m
+[0;36mDebug: Loading facts from /shared/modules/apt/lib/facter/apt_reboot_required.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/apache/lib/facter/apache_version.rb[0m
+[0;32mInfo: Loading facts[0m
+[0;36mDebug: Loading facts from /shared/modules/ssh/lib/facter/ssh.rb[0m
+[0;36mDebug: Facter: fact "facterversion" has resolved to "3.14.22".[0m
+[0;36mDebug: Facter: fact "aio_agent_version" has resolved to "6.26.0".[0m
+[0;36mDebug: Facter: skipping external facts for "/home/vagrant/.puppetlabs/opt/facter/facts.d": No such file or directory[0m
+[0;36mDebug: Facter: skipping external facts for "/home/vagrant/.facter/facts.d": No such file or directory[0m
+[0;36mDebug: Facter: searching "/home/vagrant/.puppetlabs/opt/puppet/cache/facts.d" for external facts.[0m
+[0;36mDebug: Facter: no external facts were found.[0m
+[0;36mDebug: Facter: setting fact "ipa1_fqdn" based on the value of environment variable "FACTER_ipa1_fqdn".[0m
+[0;36mDebug: Facter: fact "ipa1_fqdn" has resolved to "ipa1.openvpn.virtual".[0m
+[0;36mDebug: Facter: setting fact "ipa2_fqdn" based on the value of environment variable "FACTER_ipa2_fqdn".[0m
+[0;36mDebug: Facter: fact "ipa2_fqdn" has resolved to "ipa2.openvpn.virtual".[0m
+[0;36mDebug: Facter: setting fact "ipa_domain" based on the value of environment variable "FACTER_ipa_domain".[0m
+[0;36mDebug: Facter: fact "ipa_domain" has resolved to "OPENVPN.VIRTUAL".[0m
+[0;36mDebug: Facter: setting fact "ipa3_fqdn" based on the value of environment variable "FACTER_ipa3_fqdn".[0m
+[0;36mDebug: Facter: fact "ipa3_fqdn" has resolved to "ipa3.openvpn.virtual".[0m
+[0;36mDebug: Facter: setting fact "basedir" based on the value of environment variable "FACTER_basedir".[0m
+[0;36mDebug: Facter: fact "basedir" has resolved to "/shared".[0m
+[0;36mDebug: Facter: setting fact "ipa1_address" based on the value of environment variable "FACTER_ipa1_address".[0m
+[0;36mDebug: Facter: fact "ipa1_address" has resolved to "192.168.170.254".[0m
+[0;36mDebug: Facter: setting fact "ipa2_address" based on the value of environment variable "FACTER_ipa2_address".[0m
+[0;36mDebug: Facter: fact "ipa2_address" has resolved to "192.168.170.253".[0m
+[0;36mDebug: Facter: setting fact "ipa3_address" based on the value of environment variable "FACTER_ipa3_address".[0m
+[0;36mDebug: Facter: fact "ipa3_address" has resolved to "192.168.170.252".[0m
+[0;36mDebug: Facter: setting fact "ipa_admin_password" based on the value of environment variable "FACTER_ipa_admin_password".[0m
+[0;36mDebug: Facter: fact "ipa_admin_password" has resolved to "changeme".[0m
+[0;36mDebug: Facter: setting fact "ipa_diradmin_password" based on the value of environment variable "FACTER_ipa_diradmin_password".[0m
+[0;36mDebug: Facter: fact "ipa_diradmin_password" has resolved to "changeme".[0m
+[0;36mDebug: Facter: setting fact "profile" based on the value of environment variable "FACTER_profile".[0m
+[0;36mDebug: Facter: fact "profile" has resolved to "/etc/profile.d/openvpn.sh".[0m
+[0;36mDebug: Facter: loading all custom facts.[0m
+[0;36mDebug: Facter: loading custom fact directories from config file[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/swap_file/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/swap_file/lib/facter/swapfile_sizes.rb.[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/cat /proc/swaps[0m
+[0;36mDebug: Facter: Filename				Type		Size	Used	Priority[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/swap_file/lib/facter/swapfile_sizes_csv.rb.[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/cat /proc/swaps[0m
+[0;36mDebug: Facter: Filename				Type		Size	Used	Priority[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/systemd/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/systemd/lib/facter/systemd.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/vcsrepo/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/vcsrepo/lib/facter/vcsrepo_svn_ver.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/sudo/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/sudo/lib/facter/sudoversion.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/stdlib/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/stdlib/lib/facter/root_home.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/stdlib/lib/facter/service_provider.rb.[0m
+[0;36mDebug: Facter: searching for custom fact "operatingsystem".[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/swap_file/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/systemd/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/vcsrepo/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/sudo/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/stdlib/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/git/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/firewall/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/archive/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/php/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/mysql/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/apt/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/apache/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/ssh/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/swap_file/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/systemd/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/vcsrepo/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/sudo/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/stdlib/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/git/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/firewall/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/archive/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/php/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/mysql/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/apt/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/apache/lib/facter.[0m
+[0;36mDebug: Facter: searching for operatingsystem.rb in /shared/modules/ssh/lib/facter.[0m
+[0;36mDebug: Facter: resolving operating system facts.[0m
+[0;36mDebug: Facter: resolving kernel facts.[0m
+[0;36mDebug: Facter: fact "kernel" has resolved to "Linux".[0m
+[0;36mDebug: Facter: fact "kernelrelease" has resolved to "5.4.0-96-generic".[0m
+[0;36mDebug: Facter: fact "kernelmajversion" has resolved to "5.4".[0m
+[0;36mDebug: Facter: fact "kernelversion" has resolved to "5.4.0".[0m
+[0;36mDebug: Facter: executing command: /usr/bin/lsb_release -a[0m
+[0;36mDebug: Facter: Distributor ID:	Ubuntu[0m
+[0;36mDebug: Facter: Description:	Ubuntu 20.04.3 LTS[0m
+[0;36mDebug: Facter: Release:	20.04[0m
+[0;36mDebug: Facter: Codename:	focal[0m
+[0;36mDebug: Facter: No LSB modules are available.[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "osfamily" has resolved to "Debian".[0m
+[0;36mDebug: Facter: fact "operatingsystemmajrelease" has resolved to "20.04".[0m
+[0;36mDebug: Facter: fact "operatingsystemrelease" has resolved to "20.04".[0m
+[0;36mDebug: Facter: fact "hardwaremodel" has resolved to "x86_64".[0m
+[0;36mDebug: Facter: fact "architecture" has resolved to "amd64".[0m
+[0;36mDebug: Facter: fact "lsbdistid" has resolved to "Ubuntu".[0m
+[0;36mDebug: Facter: fact "lsbdistcodename" has resolved to "focal".[0m
+[0;36mDebug: Facter: fact "lsbdistdescription" has resolved to "Ubuntu 20.04.3 LTS".[0m
+[0;36mDebug: Facter: fact "lsbmajdistrelease" has resolved to "20.04".[0m
+[0;36mDebug: Facter: fact "lsbdistrelease" has resolved to "20.04".[0m
+[0;36mDebug: Facter: fact "operatingsystem" has resolved to "Ubuntu".[0m
+[0;36mDebug: Facter: fact "selinux" has resolved to false.[0m
+[0;36mDebug: Facter: fact "os" has resolved to {
+  architecture => "amd64",
+  distro => {
+    codename => "focal",
+    description => "Ubuntu 20.04.3 LTS",
+    id => "Ubuntu",
+    release => {
+      full => "20.04",
+      major => "20.04"
+    }
+  },
+  family => "Debian",
+  hardware => "x86_64",
+  name => "Ubuntu",
+  release => {
+    full => "20.04",
+    major => "20.04"
+  },
+  selinux => {
+    enabled => false
+  }
+}.[0m
+[0;36mDebug: Facter: searching for custom fact "osfamily".[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/swap_file/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/systemd/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/vcsrepo/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/sudo/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/stdlib/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/git/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/firewall/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/archive/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/php/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/mysql/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/apt/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/apache/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/ssh/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/swap_file/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/systemd/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/vcsrepo/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/sudo/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/stdlib/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/git/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/firewall/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/archive/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/php/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/mysql/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/apt/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/apache/lib/facter.[0m
+[0;36mDebug: Facter: searching for osfamily.rb in /shared/modules/ssh/lib/facter.[0m
+[0;36mDebug: Could not find library 'cfpropertylist' required to enable feature 'cfpropertylist'[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/stdlib/lib/facter/pe_version.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/stdlib/lib/facter/package_provider.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/stdlib/lib/facter/puppet_settings.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/git/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/git/lib/facter/git_version.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/git/lib/facter/git_exec_path.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/git/lib/facter/git_html_path.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/firewall/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/firewall/lib/facter/iptables_persistent_version.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/firewall/lib/facter/iptables_version.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/firewall/lib/facter/ip6tables_version.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/archive/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/archive/lib/facter/archive_windir.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/php/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/php/lib/facter/phpversion.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/mysql/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/mysql/lib/facter/mysql_server_id.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/mysql/lib/facter/mysqld_version.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/mysql/lib/facter/mysql_version.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/apt/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/apt/lib/facter/apt_updates.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/apt/lib/facter/apt_update_last_success.rb.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/apt/lib/facter/apt_reboot_required.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/apache/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/apache/lib/facter/apache_version.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/ssh/lib/facter.[0m
+[0;32mInfo: Facter: loading custom facts from /shared/modules/ssh/lib/facter/ssh.rb.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/swap_file/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/systemd/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/vcsrepo/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/sudo/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/stdlib/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/git/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/firewall/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/archive/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/php/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/mysql/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/apt/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/apache/lib/facter.[0m
+[0;36mDebug: Facter: searching for custom facts in /shared/modules/ssh/lib/facter.[0m
+[0;36mDebug: Facter: loading external fact directories from config file[0m
+[0;36mDebug: Facter: Error reading file: No such file or directory[0m
+[0;36mDebug: Facter: fact "agent_specified_environment" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "apache_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/apt-get -s -o Debug::NoLocking=true dist-upgrade 2>&1[0m
+[0;36mDebug: Facter: NOTE: This is only a simulation!
+      apt-get needs root privileges for real execution.
+      Keep also in mind that locking is deactivated,
+      so don't depend on the relevance to the real current situation!
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following NEW packages will be installed:
+  linux-headers-5.4.0-99 linux-headers-5.4.0-99-generic
+  linux-image-5.4.0-99-generic linux-modules-5.4.0-99-generic
+The following packages will be upgraded:
+  libpolkit-agent-1-0 libpolkit-gobject-1-0 linux-headers-generic
+  linux-headers-virtual linux-image-virtual linux-virtual open-vm-tools
+  policykit-1 python3-update-manager sosreport update-manager-core vim
+  vim-common vim-runtime vim-tiny xxd
+16 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+8 standard security updates
+Inst open-vm-tools [2:11.0.5-4] (2:11.3.0-2ubuntu0~ubuntu20.04.2 Ubuntu:20.04/focal-updates [amd64])
+Inst xxd [2:8.1.2269-1ubuntu5.6] (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Inst vim [2:8.1.2269-1ubuntu5.6] (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64]) []
+Inst vim-tiny [2:8.1.2269-1ubuntu5.6] (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64]) []
+Inst vim-runtime [2:8.1.2269-1ubuntu5.6] (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [all]) []
+Inst vim-common [2:8.1.2269-1ubuntu5.6] (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [all])
+Inst policykit-1 [0.105-26ubuntu1.1] (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64]) []
+Inst libpolkit-agent-1-0 [0.105-26ubuntu1.1] (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64]) []
+Inst libpolkit-gobject-1-0 [0.105-26ubuntu1.1] (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Inst python3-update-manager [1:20.04.10.9] (1:20.04.10.10 Ubuntu:20.04/focal-updates [all]) [update-manager-core:amd64 ]
+Inst update-manager-core [1:20.04.10.9] (1:20.04.10.10 Ubuntu:20.04/focal-updates [all])
+Inst linux-headers-5.4.0-99 (5.4.0-99.112 Ubuntu:20.04/focal-updates [all])
+Inst linux-headers-5.4.0-99-generic (5.4.0-99.112 Ubuntu:20.04/focal-updates [amd64])
+Inst linux-modules-5.4.0-99-generic (5.4.0-99.112 Ubuntu:20.04/focal-updates [amd64])
+Inst linux-image-5.4.0-99-generic (5.4.0-99.112 Ubuntu:20.04/focal-updates [amd64])
+Inst linux-virtual [5.4.0.96.100] (5.4.0.99.103 Ubuntu:20.04/focal-updates [amd64]) []
+Inst linux-image-virtual [5.4.0.96.100] (5.4.0.99.103 Ubuntu:20.04/focal-updates [amd64]) []
+Inst linux-headers-virtual [5.4.0.96.100] (5.4.0.99.103 Ubuntu:20.04/focal-updates [amd64]) []
+Inst linux-headers-generic [5.4.0.96.100] (5.4.0.99.103 Ubuntu:20.04/focal-updates [amd64])
+Inst sosreport [4.1-1ubuntu0.20.04.3] (4.2-1ubuntu0.20.04.1 Ubuntu:20.04/focal-updates [amd64])
+Conf open-vm-tools (2:11.3.0-2ubuntu0~ubuntu20.04.2 Ubuntu:20.04/focal-updates [amd64])
+Conf xxd (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf vim (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf vim-tiny (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf vim-runtime (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [all])
+Conf vim-common (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [all])
+Conf policykit-1 (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf libpolkit-agent-1-0 (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf libpolkit-gobject-1-0 (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf python3-update-manager (1:20.04.10.10 Ubuntu:20.04/focal-updates [all])
+Conf update-manager-core (1:20.04.10.10 Ubuntu:20.04/focal-updates [all])
+Conf linux-headers-5.4.0-99 (5.4.0-99.112 Ubuntu:20.04/focal-updates [all])
+Conf linux-headers-5.4.0-99-generic (5.4.0-99.112 Ubuntu:20.04/focal-updates [amd64])
+Conf linux-modules-5.4.0-99-generic (5.4.0-99.112 Ubuntu:20.04/focal-updates [amd64])
+Conf linux-image-5.4.0-99-generic (5.4.0-99.112 Ubuntu:20.04/focal-updates [amd64])
+Conf linux-virtual (5.4.0.99.103 Ubuntu:20.04/focal-updates [amd64])
+Conf linux-image-virtual (5.4.0.99.103 Ubuntu:20.04/focal-updates [amd64])
+Conf linux-headers-virtual (5.4.0.99.103 Ubuntu:20.04/focal-updates [amd64])
+Conf linux-headers-generic (5.4.0.99.103 Ubuntu:20.04/focal-updates [amd64])
+Conf sosreport (4.2-1ubuntu0.20.04.1 Ubuntu:20.04/focal-updates [amd64])[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "apt_has_dist_updates" has resolved to true.[0m
+[0;36mDebug: Facter: fact "apt_dist_updates" has resolved to 20.[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/apt-get -s -o Debug::NoLocking=true upgrade 2>&1[0m
+[0;36mDebug: Facter: NOTE: This is only a simulation!
+      apt-get needs root privileges for real execution.
+      Keep also in mind that locking is deactivated,
+      so don't depend on the relevance to the real current situation!
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages have been kept back:
+  linux-headers-generic linux-headers-virtual linux-image-virtual
+  linux-virtual
+The following packages will be upgraded:
+  libpolkit-agent-1-0 libpolkit-gobject-1-0 open-vm-tools policykit-1
+  python3-update-manager sosreport update-manager-core vim vim-common
+  vim-runtime vim-tiny xxd
+12 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+8 standard security updates
+Inst open-vm-tools [2:11.0.5-4] (2:11.3.0-2ubuntu0~ubuntu20.04.2 Ubuntu:20.04/focal-updates [amd64])
+Inst xxd [2:8.1.2269-1ubuntu5.6] (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Inst vim [2:8.1.2269-1ubuntu5.6] (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64]) []
+Inst vim-tiny [2:8.1.2269-1ubuntu5.6] (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64]) []
+Inst vim-runtime [2:8.1.2269-1ubuntu5.6] (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [all]) []
+Inst vim-common [2:8.1.2269-1ubuntu5.6] (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [all])
+Inst policykit-1 [0.105-26ubuntu1.1] (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64]) []
+Inst libpolkit-agent-1-0 [0.105-26ubuntu1.1] (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64]) []
+Inst libpolkit-gobject-1-0 [0.105-26ubuntu1.1] (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Inst python3-update-manager [1:20.04.10.9] (1:20.04.10.10 Ubuntu:20.04/focal-updates [all]) [update-manager-core:amd64 ]
+Inst update-manager-core [1:20.04.10.9] (1:20.04.10.10 Ubuntu:20.04/focal-updates [all])
+Inst sosreport [4.1-1ubuntu0.20.04.3] (4.2-1ubuntu0.20.04.1 Ubuntu:20.04/focal-updates [amd64])
+Conf open-vm-tools (2:11.3.0-2ubuntu0~ubuntu20.04.2 Ubuntu:20.04/focal-updates [amd64])
+Conf xxd (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf vim (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf vim-tiny (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf vim-runtime (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [all])
+Conf vim-common (2:8.1.2269-1ubuntu5.7 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [all])
+Conf policykit-1 (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf libpolkit-agent-1-0 (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf libpolkit-gobject-1-0 (0.105-26ubuntu1.2 Ubuntu:20.04/focal-updates, Ubuntu:20.04/focal-security [amd64])
+Conf python3-update-manager (1:20.04.10.10 Ubuntu:20.04/focal-updates [all])
+Conf update-manager-core (1:20.04.10.10 Ubuntu:20.04/focal-updates [all])
+Conf sosreport (4.2-1ubuntu0.20.04.1 Ubuntu:20.04/focal-updates [amd64])[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "apt_has_updates" has resolved to true.[0m
+[0;36mDebug: Facter: fact "apt_package_dist_updates" has resolved to [
+  "open-vm-tools",
+  "xxd",
+  "vim",
+  "vim-tiny",
+  "vim-runtime",
+  "vim-common",
+  "policykit-1",
+  "libpolkit-agent-1-0",
+  "libpolkit-gobject-1-0",
+  "python3-update-manager",
+  "update-manager-core",
+  "linux-headers-5.4.0-99",
+  "linux-headers-5.4.0-99-generic",
+  "linux-modules-5.4.0-99-generic",
+  "linux-image-5.4.0-99-generic",
+  "linux-virtual",
+  "linux-image-virtual",
+  "linux-headers-virtual",
+  "linux-headers-generic",
+  "sosreport"
+].[0m
+[0;36mDebug: Facter: fact "apt_package_security_dist_updates" has resolved to [
+  "xxd",
+  "vim",
+  "vim-tiny",
+  "vim-runtime",
+  "vim-common",
+  "policykit-1",
+  "libpolkit-agent-1-0",
+  "libpolkit-gobject-1-0"
+].[0m
+[0;36mDebug: Facter: fact "apt_package_security_updates" has resolved to [
+  "xxd",
+  "vim",
+  "vim-tiny",
+  "vim-runtime",
+  "vim-common",
+  "policykit-1",
+  "libpolkit-agent-1-0",
+  "libpolkit-gobject-1-0"
+].[0m
+[0;36mDebug: Facter: fact "apt_package_updates" has resolved to [
+  "open-vm-tools",
+  "xxd",
+  "vim",
+  "vim-tiny",
+  "vim-runtime",
+  "vim-common",
+  "policykit-1",
+  "libpolkit-agent-1-0",
+  "libpolkit-gobject-1-0",
+  "python3-update-manager",
+  "update-manager-core",
+  "sosreport"
+].[0m
+[0;36mDebug: Facter: fact "apt_reboot_required" has resolved to false.[0m
+[0;36mDebug: Facter: fact "apt_security_dist_updates" has resolved to 8.[0m
+[0;36mDebug: Facter: fact "apt_security_updates" has resolved to 8.[0m
+[0;36mDebug: Facter: fact "apt_update_last_success" has resolved to 1644250331.[0m
+[0;36mDebug: Facter: fact "apt_updates" has resolved to 12.[0m
+[0;36mDebug: Facter: fact "archive_windir" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/git --exec-path 2>/dev/null[0m
+[0;36mDebug: Facter: /usr/lib/git-core[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "git_exec_path" has resolved to "/usr/lib/git-core".[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/git --html-path 2>/dev/null[0m
+[0;36mDebug: Facter: /usr/share/doc/git/html[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "git_html_path" has resolved to "/usr/share/doc/git/html".[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/git --version 2>&1[0m
+[0;36mDebug: Facter: git version 2.25.1[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "git_version" has resolved to "2.25.1".[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/sbin/ip6tables --version[0m
+[0;36mDebug: Facter: ip6tables v1.8.4 (legacy)[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "ip6tables_version" has resolved to "1.8.4".[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/dpkg-query -Wf '${Version}' netfilter-persistent 2>/dev/null[0m
+[0;36mDebug: Facter: process exited with status code 1.[0m
+[0;36mDebug: Facter: fact "iptables_persistent_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/sbin/iptables --version[0m
+[0;36mDebug: Facter: iptables v1.8.4 (legacy)[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "iptables_version" has resolved to "1.8.4".[0m
+[0;36mDebug: Facter: custom fact "pe_build" was not found.[0m
+[0;36mDebug: Facter: fact "puppetversion" has resolved to "6.26.0".[0m
+[0;36mDebug: Facter: fact "pe_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "is_pe" has resolved to false.[0m
+[0;36mDebug: Facter: resolving networking facts.[0m
+[0;36mDebug: Facter: executing command: /usr/sbin/ip route show[0m
+[0;36mDebug: Facter: default via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100[0m
+[0;36mDebug: Facter: 10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15[0m
+[0;36mDebug: Facter: 10.0.2.2 dev enp0s3 proto dhcp scope link src 10.0.2.15 metric 100[0m
+[0;36mDebug: Facter: 192.168.154.0/24 dev enp0s8 proto kernel scope link src 192.168.154.13[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: executing command: /usr/sbin/ip -6 route show[0m
+[0;36mDebug: Facter: ::1 dev lo proto kernel metric 256 pref medium[0m
+[0;36mDebug: Facter: fe80::/64 dev enp0s3 proto kernel metric 256 pref medium[0m
+[0;36mDebug: Facter: fe80::/64 dev enp0s8 proto kernel metric 256 pref medium[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: executing command: /usr/sbin/ip link show[0m
+[0;36mDebug: Facter: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000[0m
+[0;36mDebug: Facter: link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00[0m
+[0;36mDebug: Facter: 2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000[0m
+[0;36mDebug: Facter: link/ether 02:2e:89:e3:fa:23 brd ff:ff:ff:ff:ff:ff[0m
+[0;36mDebug: Facter: 3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000[0m
+[0;36mDebug: Facter: link/ether 08:00:27:ae:b1:c5 brd ff:ff:ff:ff:ff:ff[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: searching "/run/systemd/netif/leases/" for systemd-networkd DHCP lease files[0m
+[0;36mDebug: Facter: searching "/run/systemd/netif/leases/2" for systemd-networkd DHCP lease information[0m
+[0;36mDebug: Facter: executing command: dhcpcd -U enp0s8[0m
+[0;36mDebug: Facter: dhcpcd was not found on the PATH.[0m
+[0;36mDebug: Facter: executing command: dhcpcd -U lo[0m
+[0;36mDebug: Facter: dhcpcd was not found on the PATH.[0m
+[0;36mDebug: Facter: executing command: /usr/sbin/ip link show enp0s3[0m
+[0;36mDebug: Facter: 2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000[0m
+[0;36mDebug: Facter: link/ether 02:2e:89:e3:fa:23 brd ff:ff:ff:ff:ff:ff[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: executing command: /usr/sbin/ip link show enp0s8[0m
+[0;36mDebug: Facter: 3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000[0m
+[0;36mDebug: Facter: link/ether 08:00:27:ae:b1:c5 brd ff:ff:ff:ff:ff:ff[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: executing command: /usr/sbin/ip link show lo[0m
+[0;36mDebug: Facter: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000[0m
+[0;36mDebug: Facter: link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "ipaddress_enp0s3" has resolved to "10.0.2.15".[0m
+[0;36mDebug: Facter: fact "ipaddress" has resolved to "10.0.2.15".[0m
+[0;36mDebug: Facter: fact "netmask_enp0s3" has resolved to "255.255.255.0".[0m
+[0;36mDebug: Facter: fact "netmask" has resolved to "255.255.255.0".[0m
+[0;36mDebug: Facter: fact "network_enp0s3" has resolved to "10.0.2.0".[0m
+[0;36mDebug: Facter: fact "network" has resolved to "10.0.2.0".[0m
+[0;36mDebug: Facter: fact "ipaddress6_enp0s3" has resolved to "fe80::2e:89ff:fee3:fa23".[0m
+[0;36mDebug: Facter: fact "scope6_enp0s3" has resolved to "link".[0m
+[0;36mDebug: Facter: fact "ipaddress6" has resolved to "fe80::2e:89ff:fee3:fa23".[0m
+[0;36mDebug: Facter: fact "scope6" has resolved to "link".[0m
+[0;36mDebug: Facter: fact "netmask6_enp0s3" has resolved to "ffff:ffff:ffff:ffff::".[0m
+[0;36mDebug: Facter: fact "netmask6" has resolved to "ffff:ffff:ffff:ffff::".[0m
+[0;36mDebug: Facter: fact "network6_enp0s3" has resolved to "fe80::".[0m
+[0;36mDebug: Facter: fact "network6" has resolved to "fe80::".[0m
+[0;36mDebug: Facter: fact "macaddress_enp0s3" has resolved to "02:2e:89:e3:fa:23".[0m
+[0;36mDebug: Facter: fact "macaddress" has resolved to "02:2e:89:e3:fa:23".[0m
+[0;36mDebug: Facter: fact "mtu_enp0s3" has resolved to 1500.[0m
+[0;36mDebug: Facter: fact "ipaddress_enp0s8" has resolved to "192.168.154.13".[0m
+[0;36mDebug: Facter: fact "netmask_enp0s8" has resolved to "255.255.255.0".[0m
+[0;36mDebug: Facter: fact "network_enp0s8" has resolved to "192.168.154.0".[0m
+[0;36mDebug: Facter: fact "ipaddress6_enp0s8" has resolved to "fe80::a00:27ff:feae:b1c5".[0m
+[0;36mDebug: Facter: fact "scope6_enp0s8" has resolved to "link".[0m
+[0;36mDebug: Facter: fact "netmask6_enp0s8" has resolved to "ffff:ffff:ffff:ffff::".[0m
+[0;36mDebug: Facter: fact "network6_enp0s8" has resolved to "fe80::".[0m
+[0;36mDebug: Facter: fact "macaddress_enp0s8" has resolved to "08:00:27:ae:b1:c5".[0m
+[0;36mDebug: Facter: fact "mtu_enp0s8" has resolved to 1500.[0m
+[0;36mDebug: Facter: fact "ipaddress_lo" has resolved to "127.0.0.1".[0m
+[0;36mDebug: Facter: fact "netmask_lo" has resolved to "255.0.0.0".[0m
+[0;36mDebug: Facter: fact "network_lo" has resolved to "127.0.0.0".[0m
+[0;36mDebug: Facter: fact "ipaddress6_lo" has resolved to "::1".[0m
+[0;36mDebug: Facter: fact "scope6_lo" has resolved to "host".[0m
+[0;36mDebug: Facter: fact "netmask6_lo" has resolved to "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff".[0m
+[0;36mDebug: Facter: fact "network6_lo" has resolved to "::1".[0m
+[0;36mDebug: Facter: fact "mtu_lo" has resolved to 65536.[0m
+[0;36mDebug: Facter: fact "hostname" has resolved to "pimcore".[0m
+[0;36mDebug: Facter: fact "domain" has resolved to "virtual".[0m
+[0;36mDebug: Facter: fact "fqdn" has resolved to "pimcore.virtual".[0m
+[0;36mDebug: Facter: fact "interfaces" has resolved to "enp0s3,enp0s8,lo".[0m
+[0;36mDebug: Facter: fact "dhcp_servers" has resolved to {
+  enp0s3 => "10.0.2.2",
+  system => "10.0.2.2"
+}.[0m
+[0;36mDebug: Facter: fact "networking" has resolved to {
+  dhcp => "10.0.2.2",
+  domain => "virtual",
+  fqdn => "pimcore.virtual",
+  hostname => "pimcore",
+  interfaces => {
+    enp0s3 => {
+      bindings => [
+        {
+          address => "10.0.2.15",
+          netmask => "255.255.255.0",
+          network => "10.0.2.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "fe80::2e:89ff:fee3:fa23",
+          netmask => "ffff:ffff:ffff:ffff::",
+          network => "fe80::"
+        }
+      ],
+      dhcp => "10.0.2.2",
+      ip => "10.0.2.15",
+      ip6 => "fe80::2e:89ff:fee3:fa23",
+      mac => "02:2e:89:e3:fa:23",
+      mtu => 1500,
+      netmask => "255.255.255.0",
+      netmask6 => "ffff:ffff:ffff:ffff::",
+      network => "10.0.2.0",
+      network6 => "fe80::",
+      scope6 => "link"
+    },
+    enp0s8 => {
+      bindings => [
+        {
+          address => "192.168.154.13",
+          netmask => "255.255.255.0",
+          network => "192.168.154.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "fe80::a00:27ff:feae:b1c5",
+          netmask => "ffff:ffff:ffff:ffff::",
+          network => "fe80::"
+        }
+      ],
+      ip => "192.168.154.13",
+      ip6 => "fe80::a00:27ff:feae:b1c5",
+      mac => "08:00:27:ae:b1:c5",
+      mtu => 1500,
+      netmask => "255.255.255.0",
+      netmask6 => "ffff:ffff:ffff:ffff::",
+      network => "192.168.154.0",
+      network6 => "fe80::",
+      scope6 => "link"
+    },
+    lo => {
+      bindings => [
+        {
+          address => "127.0.0.1",
+          netmask => "255.0.0.0",
+          network => "127.0.0.0"
+        }
+      ],
+      bindings6 => [
+        {
+          address => "::1",
+          netmask => "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+          network => "::1"
+        }
+      ],
+      ip => "127.0.0.1",
+      ip6 => "::1",
+      mtu => 65536,
+      netmask => "255.0.0.0",
+      netmask6 => "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      network => "127.0.0.0",
+      network6 => "::1",
+      scope6 => "host"
+    }
+  },
+  ip => "10.0.2.15",
+  ip6 => "fe80::2e:89ff:fee3:fa23",
+  mac => "02:2e:89:e3:fa:23",
+  mtu => 1500,
+  netmask => "255.255.255.0",
+  netmask6 => "ffff:ffff:ffff:ffff::",
+  network => "10.0.2.0",
+  network6 => "fe80::",
+  primary => "enp0s3",
+  scope6 => "link"
+}.[0m
+[0;36mDebug: Facter: fact "mysql_server_id" has resolved to 2313420416.[0m
+[0;36mDebug: Facter: fact "mysql_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "mysqld_version" resolved to null and will not be added.[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPear: file pear does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPecl: file pear does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderRpm: file rpm does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderYum: file yum does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderDnf: file dnf does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portupgrade does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderAix: file /usr/bin/lslpp does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swinstall does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPkgng: file /usr/local/sbin/pkg does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portupgrade does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderTdnf: file tdnf does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[0m
+[0;36mDebug: Facter: resolving fips facts.[0m
+[0;36mDebug: Facter: fact "fips_enabled" has resolved to false.[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPuppetserver_gem: file /opt/puppetlabs/bin/puppetserver does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderDnfmodule: file /usr/bin/dnf does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderAptrpm: file rpm does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[0m
+[0;36mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[0m
+[0;36mDebug: /Package[dummy]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[dummy]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: Facter: fact "package_provider" has resolved to "apt".[0m
+[0;36mDebug: Facter: fact "pe_major_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "pe_minor_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "pe_patch_version" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "phpversion" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "puppet_environmentpath" has resolved to "/home/vagrant/.puppetlabs/etc/code/environments".[0m
+[0;36mDebug: Facter: fact "puppet_server" has resolved to "puppet".[0m
+[0;36mDebug: Facter: fact "puppet_vardir" has resolved to "/home/vagrant/.puppetlabs/opt/puppet/cache".[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/getent passwd root[0m
+[0;36mDebug: Facter: root:x:0:0:root:/root:/bin/bash[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "root_home" has resolved to "/root".[0m
+[0;36mDebug: Puppet::Type::Service::ProviderInit: false value when expecting true[0m
+[0;36mDebug: Puppet::Type::Service::ProviderGentoo: file /sbin/rc-update does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderDaemontools: file /usr/bin/svc does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderRunit: file /usr/bin/sv does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderRedhat: file /sbin/chkconfig does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderOpenrc: file /bin/rc-status does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderOpenbsd: file /usr/sbin/rcctl does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderLaunchd: file /bin/launchctl does not exist[0m
+[0;36mDebug: Puppet::Type::Service::ProviderDebian: true value when expecting false[0m
+[0;36mDebug: Puppet::Type::Service::ProviderUpstart: file /sbin/start does not exist[0m
+[0;36mDebug: /Service[dummy]: Provider systemd does not support features manages_logon_credentials; not managing attribute logonpassword[0m
+[0;36mDebug: /Service[dummy]: Provider systemd does not support features configurable_timeout; not managing attribute timeout[0m
+[0;36mDebug: Facter: fact "service_provider" has resolved to "systemd".[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/ssh -V 2>&1[0m
+[0;36mDebug: Facter: OpenSSH_8.2p1 Ubuntu-4ubuntu0.4, OpenSSL 1.1.1f  31 Mar 2020[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "ssh_version" has resolved to "OpenSSH_8.2p1".[0m
+[0;36mDebug: Facter: fact "ssh_version_numeric" has resolved to "8.2".[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/sudo -V 2>&1[0m
+[0;36mDebug: Facter: Sudo version 1.8.31
+Sudoers policy plugin version 1.8.31
+Sudoers file grammar version 46
+Sudoers I/O plugin version 1.8.31[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "sudoversion" has resolved to "1.8.31".[0m
+[0;36mDebug: Facter: fact "swapfile_sizes" has resolved to {}.[0m
+[0;36mDebug: Facter: fact "swapfile_sizes_csv" resolved to null and will not be added.[0m
+[0;36mDebug: Facter: fact "systemd" has resolved to true.[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/systemctl list-unit-files --no-legend --no-pager "systemd-*" -t service --state=enabled,disabled,enabled-runtime,indirect[0m
+[0;36mDebug: Facter: systemd-boot-check-no-failures.service disabled        enabled
+systemd-fsck-root.service              enabled-runtime enabled
+systemd-network-generator.service      disabled        enabled
+systemd-networkd-wait-online.service   enabled         enabled
+systemd-networkd.service               enabled         enabled
+systemd-pstore.service                 enabled         enabled
+systemd-remount-fs.service             enabled-runtime enabled
+systemd-resolved.service               enabled         enabled
+systemd-time-wait-sync.service         disabled        enabled
+systemd-timesyncd.service              enabled         enabled[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "systemd_internal_services" has resolved to {
+  systemd-boot-check-no-failures.service => "disabled",
+  systemd-fsck-root.service => "enabled-runtime",
+  systemd-network-generator.service => "disabled",
+  systemd-networkd-wait-online.service => "enabled",
+  systemd-networkd.service => "enabled",
+  systemd-pstore.service => "enabled",
+  systemd-remount-fs.service => "enabled-runtime",
+  systemd-resolved.service => "enabled",
+  systemd-time-wait-sync.service => "disabled",
+  systemd-timesyncd.service => "enabled"
+}.[0m
+[0;36mDebug: Facter: executing command: /usr/bin/sh -c /usr/bin/systemctl --version | awk '/systemd/{ print $2 }'[0m
+[0;36mDebug: Facter: 245[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "systemd_version" has resolved to "245".[0m
+[0;36mDebug: Facter: fact "vcsrepo_svn_ver" has resolved to "".[0m
+[0;36mDebug: Facter: resolving ruby facts.[0m
+[0;36mDebug: Facter: fact "rubyplatform" has resolved to "x86_64-linux".[0m
+[0;36mDebug: Facter: fact "rubysitedir" has resolved to "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0".[0m
+[0;36mDebug: Facter: fact "rubyversion" has resolved to "2.5.9".[0m
+[0;36mDebug: Facter: fact "ruby" has resolved to {
+  platform => "x86_64-linux",
+  sitedir => "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+  version => "2.5.9"
+}.[0m
+[0;36mDebug: Facter: resolving path facts.[0m
+[0;36mDebug: Facter: fact "path" has resolved to "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/puppetlabs/bin".[0m
+[0;36mDebug: Facter: resolving AZ facts.[0m
+[0;36mDebug: Facter: resolving virtualization facts.[0m
+[0;36mDebug: Facter: resolving desktop management interface facts.[0m
+[0;36mDebug: Facter: /sys/class/dmi/id/board_serial: file could not be read.[0m
+[0;36mDebug: Facter: /sys/class/dmi/id/product_serial: file could not be read.[0m
+[0;36mDebug: Facter: /sys/class/dmi/id/product_uuid: file could not be read.[0m
+[0;36mDebug: Facter: fact "bios_vendor" has resolved to "innotek GmbH".[0m
+[0;36mDebug: Facter: fact "bios_version" has resolved to "VirtualBox".[0m
+[0;36mDebug: Facter: fact "bios_release_date" has resolved to "12/01/2006".[0m
+[0;36mDebug: Facter: fact "boardmanufacturer" has resolved to "Oracle Corporation".[0m
+[0;36mDebug: Facter: fact "boardproductname" has resolved to "VirtualBox".[0m
+[0;36mDebug: Facter: fact "productname" has resolved to "VirtualBox".[0m
+[0;36mDebug: Facter: fact "chassistype" has resolved to "Other".[0m
+[0;36mDebug: Facter: fact "manufacturer" has resolved to "innotek GmbH".[0m
+[0;36mDebug: Facter: fact "dmi" has resolved to {
+  bios => {
+    release_date => "12/01/2006",
+    vendor => "innotek GmbH",
+    version => "VirtualBox"
+  },
+  board => {
+    manufacturer => "Oracle Corporation",
+    product => "VirtualBox"
+  },
+  chassis => {
+    type => "Other"
+  },
+  manufacturer => "innotek GmbH",
+  product => {
+    name => "VirtualBox"
+  }
+}.[0m
+[0;36mDebug: Facter: executing command: /opt/puppetlabs/puppet/bin/virt-what[0m
+[0;36mDebug: Facter: virt-what: this script must be run as root[0m
+[0;36mDebug: Facter: process exited with status code 1.[0m
+[0;36mDebug: Facter: executing command: vmware -v[0m
+[0;36mDebug: Facter: vmware was not found on the PATH.[0m
+[0;36mDebug: Facter: fact "is_virtual" has resolved to true.[0m
+[0;36mDebug: Facter: fact "virtual" has resolved to "virtualbox".[0m
+[0;36mDebug: Facter: not running under a Azure instance.[0m
+[0;36mDebug: Facter: resolving EC2 facts.[0m
+[0;36mDebug: Facter: EC2 facts are unavailable: not running under an EC2 instance.[0m
+[0;36mDebug: Facter: resolving cloud facts.[0m
+[0;36mDebug: Facter: resolving cloud fact[0m
+[0;36mDebug: Facter: resolving GCE facts.[0m
+[0;36mDebug: Facter: not running under a GCE instance.[0m
+[0;36mDebug: Facter: resolving augeas facts.[0m
+[0;36mDebug: Facter: executing command: /opt/puppetlabs/puppet/bin/augparse --version[0m
+[0;36mDebug: Facter: augparse 1.12.0 <http://augeas.net/>[0m
+[0;36mDebug: Facter: completed processing output: closing child pipes.[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "augeasversion" has resolved to "1.12.0".[0m
+[0;36mDebug: Facter: fact "augeas" has resolved to {
+  version => "1.12.0"
+}.[0m
+[0;36mDebug: Facter: resolving hypervisors facts.[0m
+[0;36mDebug: Facter: executing command: /usr/sbin/dmidecode[0m
+[0;36mDebug: Facter: /sys/firmware/dmi/tables/smbios_entry_point: Permission denied[0m
+[0;36mDebug: Facter: /dev/mem: Permission denied[0m
+[0;36mDebug: Facter: # dmidecode 3.2
+Scanning /dev/mem for entry point.[0m
+[0;36mDebug: Facter: process exited with status code 1.[0m
+[0;36mDebug: Facter: Error while running dmidecode (1)[0m
+[0;36mDebug: Facter: oslevel executable not found[0m
+[0;36mDebug: Facter: zonename executable not found[0m
+[0;36mDebug: Facter: fact "hypervisors" has resolved to {
+  virtualbox => {}
+}.[0m
+[0;36mDebug: Facter: resolving disk facts.[0m
+[0;36mDebug: Facter: fact "blockdevice_sdb_vendor" has resolved to "VBOX".[0m
+[0;36mDebug: Facter: fact "blockdevice_sdb_model" has resolved to "HARDDISK".[0m
+[0;36mDebug: Facter: fact "blockdevice_sdb_size" has resolved to 10485760.[0m
+[0;36mDebug: Facter: fact "blockdevice_sda_vendor" has resolved to "VBOX".[0m
+[0;36mDebug: Facter: fact "blockdevice_sda_model" has resolved to "HARDDISK".[0m
+[0;36mDebug: Facter: fact "blockdevice_sda_size" has resolved to 42949672960.[0m
+[0;36mDebug: Facter: fact "blockdevices" has resolved to "sdb,sda".[0m
+[0;36mDebug: Facter: fact "disks" has resolved to {
+  sda => {
+    model => "HARDDISK",
+    size => "40.00 GiB",
+    size_bytes => 42949672960,
+    vendor => "VBOX"
+  },
+  sdb => {
+    model => "HARDDISK",
+    size => "10.00 MiB",
+    size_bytes => 10485760,
+    vendor => "VBOX"
+  }
+}.[0m
+[0;36mDebug: Facter: resolving processor facts.[0m
+[0;36mDebug: Facter: executing command: /usr/bin/uname -p[0m
+[0;36mDebug: Facter: x86_64[0m
+[0;36mDebug: Facter: process exited with status code 0.[0m
+[0;36mDebug: Facter: fact "hardwareisa" has resolved to "x86_64".[0m
+[0;36mDebug: Facter: fact "processorcount" has resolved to 2.[0m
+[0;36mDebug: Facter: fact "physicalprocessorcount" has resolved to 1.[0m
+[0;36mDebug: Facter: fact "processor0" has resolved to "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz".[0m
+[0;36mDebug: Facter: fact "processor1" has resolved to "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz".[0m
+[0;36mDebug: Facter: fact "processors" has resolved to {
+  count => 2,
+  isa => "x86_64",
+  models => [
+    "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+    "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz"
+  ],
+  physicalcount => 1
+}.[0m
+[0;36mDebug: Facter: resolving uptime facts.[0m
+[0;36mDebug: Facter: fact "uptime_seconds" has resolved to 487.[0m
+[0;36mDebug: Facter: fact "uptime_hours" has resolved to 0.[0m
+[0;36mDebug: Facter: fact "uptime_days" has resolved to 0.[0m
+[0;36mDebug: Facter: fact "uptime" has resolved to "0:08 hours".[0m
+[0;36mDebug: Facter: fact "system_uptime" has resolved to {
+  days => 0,
+  hours => 0,
+  seconds => 487,
+  uptime => "0:08 hours"
+}.[0m
+[0;36mDebug: Facter: resolving ssh facts.[0m
+[0;36mDebug: Facter: fact "sshdsakey" has resolved to "AAAAB3NzaC1kc3MAAACBAIfC2DZRUfzrhgqzGY0Z2JPh0cT2z6yyREWXfvy3h2r53y1IM1yTLRCRBxlOwMeCjssRgarzc9q2N5tyw9iH+N8BPu8pZ+jKHybpeqgSVLg3a9HnJO+q9hIRU7SOnUvnP3NGESRDE+W1Pmb/918cd/qV1//13+cY8RhbYxf6/0K5AAAAFQCmbO8+kvUby3GxfYTKPEnDzUbFtQAAAIA4MEG7KcMbYKOrkjrYqnswp2cwCHcW9GTXBNTJhds6zJR5ODjrg73+r6fzczcFPy/avJA40B+ddrdnVHCsYNtoZIy/c0Wz4XyB+d+PjVJ6T4JjiCGlulkzN6kZAx9HMnanTZaFwqG1ZCeKB7yNGtClN/nNmlMFu/1fdPnxSdyWYwAAAIAIyFTeWEQXiRw4b8SQj8KJeCLvtW7V/6CJcMydv0xWtNU0rtqeqBNdBhZ+O2nQSff2vLa8j8HiIQLhTDwD9Y0BPGQG3gDMaKtw+/aedGw00U5a1YUAq4ltMC+Ov75Q/MsxZNlrx7BBFGjYSFseXBYlCO8uAaSTP5BNykB6HeVRJA==".[0m
+[0;36mDebug: Facter: fact "sshfp_dsa" has resolved to "SSHFP 2 1 c48c5779d2ba1c4419e83a4d2263e7ba93e3239a
+SSHFP 2 2 c4bd45fee25fbdaf9100797b3a94949768d2e7ff1414760fdbba64db5b7e6e15".[0m
+[0;36mDebug: Facter: fact "sshrsakey" has resolved to "AAAAB3NzaC1yc2EAAAADAQABAAABgQCxqPsdd8NYmbLs/t/cxkq13AE30aNcducuphOconF+dpKLB88seMJh/6wX62fLEoaL7CcCI7fZdS9nEX2ln9o5dKQrd1g+Gv7mwFq6AS3uNUxaW1FuIosKQWoBBZ8JOzGhD5/7HfAd3n2NPmWpl2Wa1V3EDr3Yr/jqZrS5/q5pCfYdVgx3MF9YlBrtmqk7XVKlnEtiwyajaqSSSrcNvC3bVDtoVv50EdKszaX1Ojfk58dnB7yVLhiBoDFSty9h7IQDGxKdLGFmJkNYhOE1qQ7OecCnG2tKWaXaCllCACbD94txfYs3B4pG5ba4u9zOy7U3nJAFQdOuwfEn6WIkbx7BBMPxwjsSt2GnvolRX28HZIu/boJjmVYj8kxOBVikLsoSGIk+NzE09b2TYXqUw0/wlKGDLdi5ZPvL0aFlowv06GseYT3U5fnmfsGgT1HuEMJMIJZrtyCvYjvPS3g6F1Cm1a8iCcPXzrTnAvy/S30lOi/4yS4RjttkczLaLeEh3ks=".[0m
+[0;36mDebug: Facter: fact "sshfp_rsa" has resolved to "SSHFP 1 1 d667c1bd69564b190ea792ae517c18855fd4c7ec
+SSHFP 1 2 c252a89973589304ddee2a0b7b662549d72ab620502c58599f2f4500cf1252b8".[0m
+[0;36mDebug: Facter: fact "sshecdsakey" has resolved to "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNlH35yRtOf5tz3EdSBFNjHuJxhVHfnG5PsWrnH/LRPMlSdMVNs721KTT4hIPIrGquq09uf7IJowbTZAwQcr4Do=".[0m
+[0;36mDebug: Facter: fact "sshfp_ecdsa" has resolved to "SSHFP 3 1 48661b9413c687b2d812de86c4bf1c7fbcd7bba8
+SSHFP 3 2 87aa79db592fdc2add1dca107a20b5ccca79c4b108fd8c93d5bbe42198daa4dd".[0m
+[0;36mDebug: Facter: fact "sshed25519key" has resolved to "AAAAC3NzaC1lZDI1NTE5AAAAIEErratpkKv9yp3HNRI7fsEnQclSVyN6yi2lbhSyADQa".[0m
+[0;36mDebug: Facter: fact "sshfp_ed25519" has resolved to "SSHFP 4 1 785945a1639fcf1bc49d4bf5e252c698ad78d9c6
+SSHFP 4 2 d9f45fd1c52d10fa703d42a05f32bb5075077f9680c28b5cc000bba7a63848cb".[0m
+[0;36mDebug: Facter: fact "ssh" has resolved to {
+  dsa => {
+    fingerprints => {
+      sha1 => "SSHFP 2 1 c48c5779d2ba1c4419e83a4d2263e7ba93e3239a",
+      sha256 => "SSHFP 2 2 c4bd45fee25fbdaf9100797b3a94949768d2e7ff1414760fdbba64db5b7e6e15"
+    },
+    key => "AAAAB3NzaC1kc3MAAACBAIfC2DZRUfzrhgqzGY0Z2JPh0cT2z6yyREWXfvy3h2r53y1IM1yTLRCRBxlOwMeCjssRgarzc9q2N5tyw9iH+N8BPu8pZ+jKHybpeqgSVLg3a9HnJO+q9hIRU7SOnUvnP3NGESRDE+W1Pmb/918cd/qV1//13+cY8RhbYxf6/0K5AAAAFQCmbO8+kvUby3GxfYTKPEnDzUbFtQAAAIA4MEG7KcMbYKOrkjrYqnswp2cwCHcW9GTXBNTJhds6zJR5ODjrg73+r6fzczcFPy/avJA40B+ddrdnVHCsYNtoZIy/c0Wz4XyB+d+PjVJ6T4JjiCGlulkzN6kZAx9HMnanTZaFwqG1ZCeKB7yNGtClN/nNmlMFu/1fdPnxSdyWYwAAAIAIyFTeWEQXiRw4b8SQj8KJeCLvtW7V/6CJcMydv0xWtNU0rtqeqBNdBhZ+O2nQSff2vLa8j8HiIQLhTDwD9Y0BPGQG3gDMaKtw+/aedGw00U5a1YUAq4ltMC+Ov75Q/MsxZNlrx7BBFGjYSFseXBYlCO8uAaSTP5BNykB6HeVRJA==",
+    type => "ssh-dss"
+  },
+  ecdsa => {
+    fingerprints => {
+      sha1 => "SSHFP 3 1 48661b9413c687b2d812de86c4bf1c7fbcd7bba8",
+      sha256 => "SSHFP 3 2 87aa79db592fdc2add1dca107a20b5ccca79c4b108fd8c93d5bbe42198daa4dd"
+    },
+    key => "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNlH35yRtOf5tz3EdSBFNjHuJxhVHfnG5PsWrnH/LRPMlSdMVNs721KTT4hIPIrGquq09uf7IJowbTZAwQcr4Do=",
+    type => "ecdsa-sha2-nistp256"
+  },
+  ed25519 => {
+    fingerprints => {
+      sha1 => "SSHFP 4 1 785945a1639fcf1bc49d4bf5e252c698ad78d9c6",
+      sha256 => "SSHFP 4 2 d9f45fd1c52d10fa703d42a05f32bb5075077f9680c28b5cc000bba7a63848cb"
+    },
+    key => "AAAAC3NzaC1lZDI1NTE5AAAAIEErratpkKv9yp3HNRI7fsEnQclSVyN6yi2lbhSyADQa",
+    type => "ssh-ed25519"
+  },
+  rsa => {
+    fingerprints => {
+      sha1 => "SSHFP 1 1 d667c1bd69564b190ea792ae517c18855fd4c7ec",
+      sha256 => "SSHFP 1 2 c252a89973589304ddee2a0b7b662549d72ab620502c58599f2f4500cf1252b8"
+    },
+    key => "AAAAB3NzaC1yc2EAAAADAQABAAABgQCxqPsdd8NYmbLs/t/cxkq13AE30aNcducuphOconF+dpKLB88seMJh/6wX62fLEoaL7CcCI7fZdS9nEX2ln9o5dKQrd1g+Gv7mwFq6AS3uNUxaW1FuIosKQWoBBZ8JOzGhD5/7HfAd3n2NPmWpl2Wa1V3EDr3Yr/jqZrS5/q5pCfYdVgx3MF9YlBrtmqk7XVKlnEtiwyajaqSSSrcNvC3bVDtoVv50EdKszaX1Ojfk58dnB7yVLhiBoDFSty9h7IQDGxKdLGFmJkNYhOE1qQ7OecCnG2tKWaXaCllCACbD94txfYs3B4pG5ba4u9zOy7U3nJAFQdOuwfEn6WIkbx7BBMPxwjsSt2GnvolRX28HZIu/boJjmVYj8kxOBVikLsoSGIk+NzE09b2TYXqUw0/wlKGDLdi5ZPvL0aFlowv06GseYT3U5fnmfsGgT1HuEMJMIJZrtyCvYjvPS3g6F1Cm1a8iCcPXzrTnAvy/S30lOi/4yS4RjttkczLaLeEh3ks=",
+    type => "ssh-rsa"
+  }
+}.[0m
+[0;36mDebug: Facter: resolving id facts.[0m
+[0;36mDebug: Facter: fact "id" has resolved to "vagrant".[0m
+[0;36mDebug: Facter: fact "gid" has resolved to "vagrant".[0m
+[0;36mDebug: Facter: fact "identity" has resolved to {
+  gid => 1000,
+  group => "vagrant",
+  privileged => false,
+  uid => 1000,
+  user => "vagrant"
+}.[0m
+[0;36mDebug: Facter: resolving timezone facts.[0m
+[0;36mDebug: Facter: fact "timezone" has resolved to "UTC".[0m
+[0;36mDebug: Facter: resolving file system facts.[0m
+[0;36mDebug: Facter: fact "mountpoints" has resolved to {
+  / => {
+    available => "36.64 GiB",
+    available_bytes => 39343054848,
+    capacity => "5.31%",
+    device => "/dev/sda1",
+    filesystem => "ext4",
+    options => [
+      "rw",
+      "relatime"
+    ],
+    size => "38.71 GiB",
+    size_bytes => 41567858688,
+    used => "2.06 GiB",
+    used_bytes => 2208026624
+  },
+  /dev => {
+    available => "974.84 MiB",
+    available_bytes => 1022197760,
+    capacity => "0%",
+    device => "udev",
+    filesystem => "devtmpfs",
+    options => [
+      "rw",
+      "nosuid",
+      "noexec",
+      "relatime",
+      "size=998240k",
+      "nr_inodes=249560",
+      "mode=755"
+    ],
+    size => "974.84 MiB",
+    size_bytes => 1022197760,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /dev/hugepages => {
+    available => "0 bytes",
+    available_bytes => 0,
+    capacity => "100%",
+    device => "hugetlbfs",
+    filesystem => "hugetlbfs",
+    options => [
+      "rw",
+      "relatime",
+      "pagesize=2M"
+    ],
+    size => "0 bytes",
+    size_bytes => 0,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /dev/mqueue => {
+    available => "0 bytes",
+    available_bytes => 0,
+    capacity => "100%",
+    device => "mqueue",
+    filesystem => "mqueue",
+    options => [
+      "rw",
+      "nosuid",
+      "nodev",
+      "noexec",
+      "relatime"
+    ],
+    size => "0 bytes",
+    size_bytes => 0,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /dev/pts => {
+    available => "0 bytes",
+    available_bytes => 0,
+    capacity => "100%",
+    device => "devpts",
+    filesystem => "devpts",
+    options => [
+      "rw",
+      "nosuid",
+      "noexec",
+      "relatime",
+      "gid=5",
+      "mode=620",
+      "ptmxmode=000"
+    ],
+    size => "0 bytes",
+    size_bytes => 0,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /dev/shm => {
+    available => "991.58 MiB",
+    available_bytes => 1039749120,
+    capacity => "0%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "nosuid",
+      "nodev"
+    ],
+    size => "991.58 MiB",
+    size_bytes => 1039749120,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /run => {
+    available => "197.37 MiB",
+    available_bytes => 206958592,
+    capacity => "0.48%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "nosuid",
+      "nodev",
+      "noexec",
+      "relatime",
+      "size=203076k",
+      "mode=755"
+    ],
+    size => "198.32 MiB",
+    size_bytes => 207949824,
+    used => "968.00 KiB",
+    used_bytes => 991232
+  },
+  /run/lock => {
+    available => "5.00 MiB",
+    available_bytes => 5242880,
+    capacity => "0%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "nosuid",
+      "nodev",
+      "noexec",
+      "relatime",
+      "size=5120k"
+    ],
+    size => "5.00 MiB",
+    size_bytes => 5242880,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /run/snapd/ns => {
+    available => "197.37 MiB",
+    available_bytes => 206958592,
+    capacity => "0.48%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "nosuid",
+      "nodev",
+      "noexec",
+      "relatime",
+      "size=203076k",
+      "mode=755"
+    ],
+    size => "198.32 MiB",
+    size_bytes => 207949824,
+    used => "968.00 KiB",
+    used_bytes => 991232
+  },
+  /run/snapd/ns/lxd.mnt => {
+    available => "0 bytes",
+    available_bytes => 0,
+    capacity => "100%",
+    device => "nsfs",
+    filesystem => "nsfs",
+    options => [
+      "rw"
+    ],
+    size => "0 bytes",
+    size_bytes => 0,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /run/user/1000 => {
+    available => "198.32 MiB",
+    available_bytes => 207949824,
+    capacity => "0%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "rw",
+      "nosuid",
+      "nodev",
+      "relatime",
+      "size=203076k",
+      "mode=700",
+      "uid=1000",
+      "gid=1000"
+    ],
+    size => "198.32 MiB",
+    size_bytes => 207949824,
+    used => "0 bytes",
+    used_bytes => 0
+  },
+  /shared => {
+    available => "145.86 GiB",
+    available_bytes => 156610650112,
+    capacity => "25.43%",
+    device => "shared",
+    filesystem => "vboxsf",
+    options => [
+      "rw",
+      "nodev",
+      "relatime",
+      "iocharset=utf8",
+      "uid=1000",
+      "gid=1000"
+    ],
+    size => "195.60 GiB",
+    size_bytes => 210028724224,
+    used => "49.75 GiB",
+    used_bytes => 53418074112
+  },
+  /snap/core20/1270 => {
+    available => "0 bytes",
+    available_bytes => 0,
+    capacity => "100%",
+    device => "/dev/loop1",
+    filesystem => "squashfs",
+    options => [
+      "ro",
+      "nodev",
+      "relatime"
+    ],
+    size => "62.00 MiB",
+    size_bytes => 65011712,
+    used => "62.00 MiB",
+    used_bytes => 65011712
+  },
+  /snap/lxd/21835 => {
+    available => "0 bytes",
+    available_bytes => 0,
+    capacity => "100%",
+    device => "/dev/loop0",
+    filesystem => "squashfs",
+    options => [
+      "ro",
+      "nodev",
+      "relatime"
+    ],
+    size => "67.25 MiB",
+    size_bytes => 70516736,
+    used => "67.25 MiB",
+    used_bytes => 70516736
+  },
+  /snap/snapd/14295 => {
+    available => "0 bytes",
+    available_bytes => 0,
+    capacity => "100%",
+    device => "/dev/loop2",
+    filesystem => "squashfs",
+    options => [
+      "ro",
+      "nodev",
+      "relatime"
+    ],
+    size => "43.38 MiB",
+    size_bytes => 45481984,
+    used => "43.38 MiB",
+    used_bytes => 45481984
+  },
+  /sys/fs/cgroup => {
+    available => "991.58 MiB",
+    available_bytes => 1039749120,
+    capacity => "0%",
+    device => "tmpfs",
+    filesystem => "tmpfs",
+    options => [
+      "ro",
+      "nosuid",
+      "nodev",
+      "noexec",
+      "mode=755"
+    ],
+    size => "991.58 MiB",
+    size_bytes => 1039749120,
+    used => "0 bytes",
+    used_bytes => 0
+  }
+}.[0m
+[0;36mDebug: Facter: fact "filesystems" has resolved to "btrfs,ext2,ext3,ext4,iso9660,squashfs,vfat".[0m
+[0;36mDebug: Facter: fact "partitions" has resolved to {
+  /dev/loop0 => {
+    backing_file => "/var/lib/snapd/snaps/lxd_21835.snap",
+    mount => "/snap/lxd/21835",
+    size => "67.24 MiB",
+    size_bytes => 70508544
+  },
+  /dev/loop1 => {
+    backing_file => "/var/lib/snapd/snaps/core20_1270.snap",
+    mount => "/snap/core20/1270",
+    size => "61.91 MiB",
+    size_bytes => 64913408
+  },
+  /dev/loop2 => {
+    backing_file => "/var/lib/snapd/snaps/snapd_14295.snap",
+    mount => "/snap/snapd/14295",
+    size => "43.27 MiB",
+    size_bytes => 45371392
+  },
+  /dev/sda1 => {
+    mount => "/",
+    size => "40.00 GiB",
+    size_bytes => 42948607488
+  }
+}.[0m
+[0;36mDebug: Facter: resolving memory facts.[0m
+[0;36mDebug: Facter: fact "memoryfree" has resolved to "1.62 GiB".[0m
+[0;36mDebug: Facter: fact "memoryfree_mb" has resolved to 1663.21.[0m
+[0;36mDebug: Facter: fact "memorysize" has resolved to "1.94 GiB".[0m
+[0;36mDebug: Facter: fact "memorysize_mb" has resolved to 1983.16.[0m
+[0;36mDebug: Facter: fact "memory" has resolved to {
+  system => {
+    available => "1.62 GiB",
+    available_bytes => 1743998976,
+    capacity => "16.13%",
+    total => "1.94 GiB",
+    total_bytes => 2079498240,
+    used => "319.96 MiB",
+    used_bytes => 335499264
+  }
+}.[0m
+[0;36mDebug: Facter: resolving load_average facts.[0m
+[0;36mDebug: Facter: fact "load_averages" has resolved to {
+  15m => 0.07,
+  1m => 0.08,
+  5m => 0.1
+}.[0m
+[0;36mDebug: Facter: resolving Xen facts.[0m
+[0;36mDebug: Evicting cache entry for environment :production[0m
+[0;36mDebug: Deleted text domain :production: false[0m
+[0;36mDebug: Reset text domain to :production[0m
+[0;36mDebug: Caching environment :production (ttl = 0 sec)[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/server.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::server from mysql/server into production[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/params.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::params from mysql/params into production[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/db.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::db from mysql/db into production[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/server/config.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::server::config from mysql/server/config into production[0m
+[0;36mDebug: File[/etc/mysql/conf.d]: Adding default for owner[0m
+[0;36mDebug: File[/etc/mysql/conf.d]: Adding default for group[0m
+[0;36mDebug: File[/etc/mysql]: Adding default for owner[0m
+[0;36mDebug: File[/etc/mysql]: Adding default for group[0m
+[0;36mDebug: Scope(Class[Mysql::Server::Config]): Retrieving template mysql/my.cnf.erb[0m
+[0;36mDebug: template[/shared/modules/mysql/templates/my.cnf.erb]: Bound template variables for /shared/modules/mysql/templates/my.cnf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/mysql/templates/my.cnf.erb]: Interpolated template /shared/modules/mysql/templates/my.cnf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/server/install.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::server::install from mysql/server/install into production[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/server/managed_dirs.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::server::managed_dirs from mysql/server/managed_dirs into production[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/server/installdb.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::server::installdb from mysql/server/installdb into production[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/server/service.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::server::service from mysql/server/service into production[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/server/root_password.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::server::root_password from mysql/server/root_password into production[0m
+[0;36mDebug: Scope(Class[Mysql::Server::Root_password]): Retrieving template mysql/my.cnf.pass.erb[0m
+[0;36mDebug: template[/shared/modules/mysql/templates/my.cnf.pass.erb]: Bound template variables for /shared/modules/mysql/templates/my.cnf.pass.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/mysql/templates/my.cnf.pass.erb]: Interpolated template /shared/modules/mysql/templates/my.cnf.pass.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/server/providers.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::server::providers from mysql/server/providers into production[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/server/account_security.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::server::account_security from mysql/server/account_security into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/init.pp' in environment production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/globals.pp' in environment production[0m
+[0;36mDebug: importing '/shared/modules/stdlib/manifests/init.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::globals from php/globals into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/params.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::params from php/params into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/repo.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::repo from php/repo into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/repo/ubuntu.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::repo::ubuntu from php/repo/ubuntu into production[0m
+[0;36mDebug: importing '/shared/modules/apt/manifests/init.pp' in environment production[0m
+[0;36mDebug: Automatically imported apt from apt into production[0m
+[0;36mDebug: importing '/shared/modules/apt/manifests/params.pp' in environment production[0m
+[0;36mDebug: Automatically imported apt::params from apt/params into production[0m
+[0;36mDebug: importing '/shared/modules/apt/manifests/update.pp' in environment production[0m
+[0;36mDebug: Automatically imported apt::update from apt/update into production[0m
+[0;36mDebug: Scope(Class[Apt]): Retrieving epp template apt/_conf_header.epp[0m
+[0;36mDebug: Scope(Class[Apt]): Retrieving epp template apt/proxy.epp[0m
+[0;36mDebug: Scope(Class[Apt]): Retrieving epp template apt/15update-stamp.epp[0m
+[0;36mDebug: importing '/shared/modules/apt/manifests/setting.pp' in environment production[0m
+[0;36mDebug: Automatically imported apt::setting from apt/setting into production[0m
+[0;36mDebug: Scope(Class[Apt]): Retrieving epp template apt/auth_conf.epp[0m
+[0;36mDebug: Resource package[gnupg] was not determined to be defined[0m
+[0;36mDebug: Create new resource package[gnupg] with params {"ensure"=>"installed"}[0m
+[0;36mDebug: importing '/shared/modules/apt/manifests/ppa.pp' in environment production[0m
+[0;36mDebug: Automatically imported apt::ppa from apt/ppa into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/packages.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::packages from php/packages into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/cli.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::cli from php/cli into production[0m
+[0;36mDebug: Lookup of 'php::cli::settings'
+  Searching for "php::cli::settings"
+    Merge strategy deep
+      Options: {
+        "merge_hash_arrays" => true
+      }
+      Global Data Provider (hiera configuration version 5)
+        No such key: "php::cli::settings"
+      Module "php" Data Provider (hiera configuration version 5)
+        Using configuration "/shared/modules/php/hiera.yaml"
+        Hierarchy entry "default.yaml"
+          Path "/shared/modules/php/data/default.yaml"
+            Original path: "default.yaml"
+            No such key: "php::cli::settings"[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/config.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::config from php/config into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/fpm.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::fpm from php/fpm into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/fpm/config.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::fpm::config from php/fpm/config into production[0m
+[0;36mDebug: Scope(Class[Php::Fpm::Config]): Retrieving template php/fpm/php-fpm.conf.erb[0m
+[0;36mDebug: template[/shared/modules/php/templates/fpm/php-fpm.conf.erb]: Bound template variables for /shared/modules/php/templates/fpm/php-fpm.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/php/templates/fpm/php-fpm.conf.erb]: Interpolated template /shared/modules/php/templates/fpm/php-fpm.conf.erb in 0.00 seconds[0m
+[0;36mDebug: Resource file[/var/run/php-fpm] was not determined to be defined[0m
+[0;36mDebug: Create new resource file[/var/run/php-fpm] with params {"ensure"=>"directory", "owner"=>"root", "group"=>"root", "mode"=>"0755"}[0m
+[0;36mDebug: Resource file[/var/log/php-fpm/] was not determined to be defined[0m
+[0;36mDebug: Create new resource file[/var/log/php-fpm/] with params {"ensure"=>"directory", "owner"=>"root", "group"=>"root", "mode"=>"0770"}[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/fpm/service.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::fpm::service from php/fpm/service into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/extension.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::extension from php/extension into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/fpm/pool.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::fpm::pool from php/fpm/pool into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/dev.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::dev from php/dev into production[0m
+[0;36mDebug: Resource package[php8.0-xml] was not determined to be defined[0m
+[0;36mDebug: Create new resource package[php8.0-xml] with params {"ensure"=>"installed", "require"=>Class[Apt::Update]{:name=>"Apt::Update"}}[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/composer.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::composer from php/composer into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/composer/auto_update.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::composer::auto_update from php/composer/auto_update into production[0m
+[0;36mDebug: importing '/shared/modules/php/manifests/pear.pp' in environment production[0m
+[0;36mDebug: Automatically imported php::pear from php/pear into production[0m
+[0;36mDebug: Matching resource is Package[php8.0-xml][0m
+[0;36mDebug: Matching resource is Package[php8.0-xml][0m
+[0;36mDebug: Resource package[php8.0-xml] with params {"ensure"=>"installed", "require"=>Class[Apt::Update]{:name=>"Apt::Update"}} not created because it already exists[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/init.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache from apache into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/params.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::params from apache/params into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/version.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::version from apache/version into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/service.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::service from apache/service into production[0m
+[0;36mDebug: Exec[mkdir /etc/apache2/conf.d]: Adding default for path[0m
+[0;36mDebug: Exec[mkdir /etc/apache2/mods-available]: Adding default for path[0m
+[0;36mDebug: Exec[mkdir /etc/apache2/mods-enabled]: Adding default for path[0m
+[0;36mDebug: Exec[mkdir /etc/apache2/sites-available]: Adding default for path[0m
+[0;36mDebug: Exec[mkdir /etc/apache2/sites-enabled]: Adding default for path[0m
+[0;36mDebug: importing '/shared/modules/concat/manifests/init.pp' in environment production[0m
+[0;36mDebug: Automatically imported concat from concat into production[0m
+[0;36mDebug: Scope(Class[Apache]): Retrieving template apache/ports_header.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/ports_header.erb]: Bound template variables for /shared/modules/apache/templates/ports_header.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/ports_header.erb]: Interpolated template /shared/modules/apache/templates/ports_header.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/concat/manifests/fragment.pp' in environment production[0m
+[0;36mDebug: Automatically imported concat::fragment from concat/fragment into production[0m
+[0;36mDebug: Scope(Class[Apache]): Retrieving template apache/httpd.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/httpd.conf.erb]: Bound template variables for /shared/modules/apache/templates/httpd.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/httpd.conf.erb]: Interpolated template /shared/modules/apache/templates/httpd.conf.erb in 0.01 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/default_mods.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::default_mods from apache/default_mods into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod from apache/mod into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/authn_core.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::authn_core from apache/mod/authn_core into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/reqtimeout.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::reqtimeout from apache/mod/reqtimeout into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Reqtimeout]): Retrieving template apache/mod/reqtimeout.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/reqtimeout.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/reqtimeout.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/reqtimeout.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/reqtimeout.conf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/cgi.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::cgi from apache/mod/cgi into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/alias.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::alias from apache/mod/alias into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Alias]): Retrieving template apache/mod/alias.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/alias.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/alias.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/alias.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/alias.conf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/authn_file.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::authn_file from apache/mod/authn_file into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/autoindex.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::autoindex from apache/mod/autoindex into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Autoindex]): Retrieving template apache/mod/autoindex.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/autoindex.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/autoindex.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/autoindex.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/autoindex.conf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/dav.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::dav from apache/mod/dav into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/dav_fs.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::dav_fs from apache/mod/dav_fs into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Dav_fs]): Retrieving template apache/mod/dav_fs.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/dav_fs.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/dav_fs.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/dav_fs.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/dav_fs.conf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/deflate.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::deflate from apache/mod/deflate into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Deflate]): Retrieving template apache/mod/deflate.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/deflate.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/deflate.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/deflate.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/deflate.conf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/dir.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::dir from apache/mod/dir into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Dir]): Retrieving template apache/mod/dir.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/dir.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/dir.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/dir.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/dir.conf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/mime.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::mime from apache/mod/mime into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Mime]): Retrieving template apache/mod/mime.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/mime.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/mime.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/mime.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/mime.conf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/negotiation.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::negotiation from apache/mod/negotiation into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Negotiation]): Retrieving template apache/mod/negotiation.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/negotiation.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/negotiation.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/negotiation.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/negotiation.conf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/setenvif.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::setenvif from apache/mod/setenvif into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Setenvif]): Retrieving template apache/mod/setenvif.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/setenvif.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/setenvif.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/setenvif.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/setenvif.conf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/filter.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::filter from apache/mod/filter into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/authz_user.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::authz_user from apache/mod/authz_user into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/env.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::env from apache/mod/env into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/default_confd_files.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::default_confd_files from apache/default_confd_files into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/prefork.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::prefork from apache/mod/prefork into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Prefork]): Retrieving template apache/mod/prefork.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/prefork.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/prefork.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/prefork.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/prefork.conf.erb in 0.00 seconds[0m
+[0;36mDebug: File[/etc/apache2/mods-available/prefork.conf]: Adding default for owner[0m
+[0;36mDebug: File[/etc/apache2/mods-available/prefork.conf]: Adding default for group[0m
+[0;36mDebug: File[/etc/apache2/mods-available/prefork.conf]: Adding default for mode[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mpm.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mpm from apache/mpm into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/vhost.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::vhost from apache/vhost into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/php.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::php from apache/mod/php into production[0m
+[0;36mDebug: Scope(Class[Apache::Mod::Php]): Retrieving template apache/mod/php.conf.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/php.conf.erb]: Bound template variables for /shared/modules/apache/templates/mod/php.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/php.conf.erb]: Interpolated template /shared/modules/apache/templates/mod/php.conf.erb in 0.00 seconds[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/headers.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::headers from apache/mod/headers into production[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mod/rewrite.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mod::rewrite from apache/mod/rewrite into production[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/client.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::client from mysql/client into production[0m
+[0;36mDebug: importing '/shared/modules/mysql/manifests/client/install.pp' in environment production[0m
+[0;36mDebug: Automatically imported mysql::client::install from mysql/client/install into production[0m
+[0;36mDebug: Resource mysql_database[pimcore] was not determined to be defined[0m
+[0;36mDebug: Create new resource mysql_database[pimcore] with params {"ensure"=>"present", "charset"=>"utf8mb4", "collate"=>"utf8mb4_unicode_ci", "provider"=>"mysql", "require"=>[Class[Mysql::Client]{:name=>"Mysql::Client"}]}[0m
+[0;36mDebug: Resource mysql_user[pimcore@127.0.0.1] was not determined to be defined[0m
+[0;36mDebug: Create new resource mysql_user[pimcore@127.0.0.1] with params {"ensure"=>"present", "password_hash"=>"*412C2A53B39A33F512B23BEF71492429D93589A1", "tls_options"=>nil}[0m
+[0;36mDebug: Resource package[software-properties-common] was not determined to be defined[0m
+[0;36mDebug: Create new resource package[software-properties-common] with params {"ensure"=>"installed"}[0m
+[0;36mDebug: Scope(Php::Fpm::Pool[www]): Retrieving template php/fpm/pool.conf.erb[0m
+[0;36mDebug: template[/shared/modules/php/templates/fpm/pool.conf.erb]: Bound template variables for /shared/modules/php/templates/fpm/pool.conf.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/php/templates/fpm/pool.conf.erb]: Interpolated template /shared/modules/php/templates/fpm/pool.conf.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[authz_host]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[authn_core]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[reqtimeout]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[cgi]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[alias]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[authn_file]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[autoindex]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[dav]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[dav_fs]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[deflate]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[dir]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[mime]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[negotiation]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[setenvif]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[auth_basic]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[filter]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[authz_core]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[access_compat]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[authz_user]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[authz_groupfile]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[env]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: File[/etc/apache2/mods-available/prefork.load]: Adding default for owner[0m
+[0;36mDebug: File[/etc/apache2/mods-available/prefork.load]: Adding default for group[0m
+[0;36mDebug: File[/etc/apache2/mods-available/prefork.load]: Adding default for mode[0m
+[0;36mDebug: File[/etc/apache2/mods-enabled/prefork.conf]: Adding default for owner[0m
+[0;36mDebug: File[/etc/apache2/mods-enabled/prefork.conf]: Adding default for group[0m
+[0;36mDebug: File[/etc/apache2/mods-enabled/prefork.conf]: Adding default for mode[0m
+[0;36mDebug: File[/etc/apache2/mods-enabled/prefork.load]: Adding default for owner[0m
+[0;36mDebug: File[/etc/apache2/mods-enabled/prefork.load]: Adding default for group[0m
+[0;36mDebug: File[/etc/apache2/mods-enabled/prefork.load]: Adding default for mode[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mpm/disable_mpm_event.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mpm::disable_mpm_event from apache/mpm/disable_mpm_event into production[0m
+[0;36mDebug: Exec[/usr/sbin/a2dismod event]: Adding default for path[0m
+[0;36mDebug: Exec[remove distribution event load file]: Adding default for path[0m
+[0;36mDebug: Exec[remove distribution event conf file]: Adding default for path[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/mpm/disable_mpm_worker.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::mpm::disable_mpm_worker from apache/mpm/disable_mpm_worker into production[0m
+[0;36mDebug: Exec[/usr/sbin/a2dismod worker]: Adding default for path[0m
+[0;36mDebug: Scope(Apache::Vhost[default]): Retrieving template apache/vhost/_file_header.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_header.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_file_header.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_header.erb]: Interpolated template /shared/modules/apache/templates/vhost/_file_header.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default]): Retrieving template apache/vhost/_docroot.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_docroot.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_docroot.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_docroot.erb]: Interpolated template /shared/modules/apache/templates/vhost/_docroot.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default]): Retrieving template apache/vhost/_directories.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_directories.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_directories.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default]): Retrieving template apache/vhost/_require.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_require.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_require.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_require.erb]: Interpolated template /shared/modules/apache/templates/vhost/_require.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_directories.erb]: Interpolated template /shared/modules/apache/templates/vhost/_directories.erb in 0.01 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default]): Retrieving template apache/vhost/_logging.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_logging.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_logging.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_logging.erb]: Interpolated template /shared/modules/apache/templates/vhost/_logging.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default]): Retrieving template apache/vhost/_serversignature.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_serversignature.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_serversignature.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_serversignature.erb]: Interpolated template /shared/modules/apache/templates/vhost/_serversignature.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default]): Retrieving template apache/vhost/_access_log.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_access_log.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_access_log.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_access_log.erb]: Interpolated template /shared/modules/apache/templates/vhost/_access_log.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default]): Retrieving template apache/vhost/_scriptalias.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_scriptalias.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_scriptalias.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_scriptalias.erb]: Interpolated template /shared/modules/apache/templates/vhost/_scriptalias.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default]): Retrieving template apache/vhost/_file_footer.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_footer.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_file_footer.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_footer.erb]: Interpolated template /shared/modules/apache/templates/vhost/_file_footer.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default-ssl]): Retrieving template apache/vhost/_file_header.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_header.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_file_header.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_header.erb]: Interpolated template /shared/modules/apache/templates/vhost/_file_header.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default-ssl]): Retrieving template apache/vhost/_docroot.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_docroot.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_docroot.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_docroot.erb]: Interpolated template /shared/modules/apache/templates/vhost/_docroot.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default-ssl]): Retrieving template apache/vhost/_directories.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_directories.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_directories.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default-ssl]): Retrieving template apache/vhost/_require.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_require.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_require.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_require.erb]: Interpolated template /shared/modules/apache/templates/vhost/_require.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_directories.erb]: Interpolated template /shared/modules/apache/templates/vhost/_directories.erb in 0.01 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default-ssl]): Retrieving template apache/vhost/_logging.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_logging.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_logging.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_logging.erb]: Interpolated template /shared/modules/apache/templates/vhost/_logging.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default-ssl]): Retrieving template apache/vhost/_serversignature.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_serversignature.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_serversignature.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_serversignature.erb]: Interpolated template /shared/modules/apache/templates/vhost/_serversignature.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default-ssl]): Retrieving template apache/vhost/_access_log.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_access_log.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_access_log.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_access_log.erb]: Interpolated template /shared/modules/apache/templates/vhost/_access_log.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default-ssl]): Retrieving template apache/vhost/_scriptalias.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_scriptalias.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_scriptalias.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_scriptalias.erb]: Interpolated template /shared/modules/apache/templates/vhost/_scriptalias.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[default-ssl]): Retrieving template apache/vhost/_file_footer.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_footer.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_file_footer.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_footer.erb]: Interpolated template /shared/modules/apache/templates/vhost/_file_footer.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[php7.4]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[headers]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Mod[rewrite]): Retrieving template apache/mod/load.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Bound template variables for /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/mod/load.erb]: Interpolated template /shared/modules/apache/templates/mod/load.erb in 0.00 seconds[0m
+[1;33mWarning: Scope(Apache::Vhost[pimcore.virtual]): 
+    It is possible for multiple virtual hosts to be configured using the same $servername but a different port. When
+    using $use_servername_for_filenames, this can lead to duplicate resource declarations.
+    When $use_port_for_filenames = true, the $servername and $port parameters, sanitized, are used to construct log and
+    config file names.
+
+    From version v7.0.0 of the puppetlabs-apache module, this parameter will default to true. From version v8.0.0 of the
+    module, the $use_port_for_filenames will be removed and log/config file names will be derived from the
+    sanitized $servername parameter when not explicitly defined.[0m
+[0;36mDebug: importing '/shared/modules/apache/manifests/listen.pp' in environment production[0m
+[0;36mDebug: Automatically imported apache::listen from apache/listen into production[0m
+[0;36mDebug: Resource apache::listen[80] was not determined to be defined[0m
+[0;36mDebug: Create new resource apache::listen[80] with params {}[0m
+[0;36mDebug: Scope(Apache::Vhost[pimcore.virtual]): Retrieving template apache/vhost/_file_header.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_header.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_file_header.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_header.erb]: Interpolated template /shared/modules/apache/templates/vhost/_file_header.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[pimcore.virtual]): Retrieving template apache/vhost/_docroot.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_docroot.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_docroot.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_docroot.erb]: Interpolated template /shared/modules/apache/templates/vhost/_docroot.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[pimcore.virtual]): Retrieving template apache/vhost/_directories.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_directories.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_directories.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[pimcore.virtual]): Retrieving template apache/vhost/_require.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_require.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_require.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_require.erb]: Interpolated template /shared/modules/apache/templates/vhost/_require.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_directories.erb]: Interpolated template /shared/modules/apache/templates/vhost/_directories.erb in 0.01 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[pimcore.virtual]): Retrieving template apache/vhost/_logging.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_logging.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_logging.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_logging.erb]: Interpolated template /shared/modules/apache/templates/vhost/_logging.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[pimcore.virtual]): Retrieving template apache/vhost/_serversignature.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_serversignature.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_serversignature.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_serversignature.erb]: Interpolated template /shared/modules/apache/templates/vhost/_serversignature.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[pimcore.virtual]): Retrieving template apache/vhost/_access_log.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_access_log.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_access_log.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_access_log.erb]: Interpolated template /shared/modules/apache/templates/vhost/_access_log.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Vhost[pimcore.virtual]): Retrieving template apache/vhost/_file_footer.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_footer.erb]: Bound template variables for /shared/modules/apache/templates/vhost/_file_footer.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/vhost/_file_footer.erb]: Interpolated template /shared/modules/apache/templates/vhost/_file_footer.erb in 0.00 seconds[0m
+[0;36mDebug: Scope(Apache::Listen[80]): Retrieving template apache/listen.erb[0m
+[0;36mDebug: template[/shared/modules/apache/templates/listen.erb]: Bound template variables for /shared/modules/apache/templates/listen.erb in 0.00 seconds[0m
+[0;36mDebug: template[/shared/modules/apache/templates/listen.erb]: Interpolated template /shared/modules/apache/templates/listen.erb in 0.00 seconds[0m
+[0;36mDebug: Adding relationship from Class[Mysql::Server::Root_password] to Mysql::Db[pimcore] with 'before'[0m
+[0;36mDebug: Adding relationship from File[mysql-config-file] to Service[mysqld] with 'before'[0m
+[0;36mDebug: Adding relationship from Mysql_user[root@localhost] to File[/root/.my.cnf] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Mysql::Server::Config] to Class[Mysql::Server::Service] with 'notify'[0m
+[0;36mDebug: Adding relationship from Anchor[mysql::server::start] to Class[Mysql::Server::Config] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Mysql::Server::Config] to Class[Mysql::Server::Install] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Mysql::Server::Install] to Class[Mysql::Server::Managed_dirs] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Mysql::Server::Managed_dirs] to Class[Mysql::Server::Installdb] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Mysql::Server::Installdb] to Class[Mysql::Server::Service] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Mysql::Server::Service] to Class[Mysql::Server::Root_password] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Mysql::Server::Root_password] to Class[Mysql::Server::Providers] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Mysql::Server::Providers] to Anchor[mysql::server::end] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Apt::Update] to Package[php8.0-cli] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Apt::Update] to Package[php8.0-common] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Php::Packages] to Class[Php::Cli] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Php::Fpm::Config] to Class[Php::Fpm::Service] with 'notify'[0m
+[0;36mDebug: Adding relationship from Archive[download composer] to File[/usr/local/bin/composer] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Php::Globals] to Class[Php] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Apache::Mod::Prefork] to Class[Apache::Mod::Cgi] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Apache::Mod::Dav] to Class[Apache::Mod::Dav_fs] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Apache::Mod::Prefork] to File[php7.4.conf] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Apache::Mod::Mime] to Class[Apache::Mod::Dir] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Apache::Mod::Dir] to Class[Apache::Mod::Php] with 'before'[0m
+[0;36mDebug: Adding relationship from Anchor[mysql::client::start] to Class[Mysql::Client::Install] with 'before'[0m
+[0;36mDebug: Adding relationship from Class[Mysql::Client::Install] to Anchor[mysql::client::end] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[authz_host] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[authn_core] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[reqtimeout] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[cgi] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[alias] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[authn_file] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[autoindex] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[dav] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[dav_fs] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[deflate] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[dir] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[mime] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[negotiation] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[setenvif] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[auth_basic] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[filter] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[authz_core] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[access_compat] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[authz_user] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[authz_groupfile] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[env] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Package[libapache2-mod-php7.4] to File[php7.4.conf] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[php7.4] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[headers] to Anchor[::apache::modules_set_up] with 'before'[0m
+[0;36mDebug: Adding relationship from Apache::Mod[rewrite] to Anchor[::apache::modules_set_up] with 'before'[0m
+[mNotice: Compiled catalog for pimcore.virtual in environment production in 1.03 seconds[0m
+[0;36mDebug: Found in cache :production (ttl = 0 sec)[0m
+[0;36mDebug: /Package[curl]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[curl]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Package[unzip]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[unzip]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Package[wget]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[wget]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Package[git]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[git]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Package[mysql-server]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[mysql-server]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: Puppet::Type::Mysql_datadir::ProviderMysql: file mysqld does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_datadir::ProviderMysql: file mysqld does not exist[0m
+[0;36mDebug: /Service[mysqld]: Provider systemd does not support features manages_logon_credentials; not managing attribute logonpassword[0m
+[0;36mDebug: /Service[mysqld]: Provider systemd does not support features configurable_timeout; not managing attribute timeout[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_database::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_database::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: /Package[gnupg]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[gnupg]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Package[php8.0-cli]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[php8.0-cli]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Package[php8.0-common]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[php8.0-common]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Package[php8.0-fpm]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[php8.0-fpm]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Service[php8.0-fpm]: Provider systemd does not support features manages_logon_credentials; not managing attribute logonpassword[0m
+[0;36mDebug: /Service[php8.0-fpm]: Provider systemd does not support features configurable_timeout; not managing attribute timeout[0m
+[0;36mDebug: /Package[php8.0-xml]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[php8.0-xml]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Package[php8.0-dev]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[php8.0-dev]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Package[php-pear]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[php-pear]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: /Package[httpd]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[httpd]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[0m
+[0;36mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[0m
+[0;36mDebug: Could not find library 'ldap' required to enable feature 'ldap'[0m
+[0;36mDebug: Puppet::Type::User::ProviderLdap: feature ldap is missing[0m
+[0;36mDebug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist[0m
+[0;36mDebug: /User[www-data]: Provider useradd does not support features manages_local_users_and_groups; not managing attribute forcelocal[0m
+[0;36mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[0m
+[0;36mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[0m
+[0;36mDebug: Puppet::Type::Group::ProviderLdap: feature ldap is missing[0m
+[0;36mDebug: /Group[www-data]: Provider groupadd does not support features manages_local_users_and_groups; not managing attribute forcelocal[0m
+[0;36mDebug: /Service[httpd]: Provider systemd does not support features manages_logon_credentials; not managing attribute logonpassword[0m
+[0;36mDebug: /Service[httpd]: Provider systemd does not support features configurable_timeout; not managing attribute timeout[0m
+[0;36mDebug: /Package[mime-support]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[mime-support]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: Facter: custom fact "{:operatingsystem=>[:debian, :ubuntu], :osfamily=>:suse}" was not found.[0m
+[0;36mDebug: Facter: custom fact "{:operatingsystem=>[:debian, :ubuntu], :osfamily=>:suse}" was not found.[0m
+[0;36mDebug: Facter: custom fact "{:operatingsystem=>[:debian, :ubuntu], :osfamily=>:suse}" was not found.[0m
+[0;36mDebug: /Package[mysql_client]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[mysql_client]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[0;36mDebug: Puppet::Type::Mysql_database::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_user::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: Puppet::Type::Mysql_grant::ProviderMysql: file mysql does not exist[0m
+[0;36mDebug: /Package[software-properties-common]: Provider apt does not support features targetable; not managing attribute command[0m
+[0;36mDebug: /Package[software-properties-common]: Provider apt does not support features install_only; not managing attribute install_only[0m
+[1;31mError: Parameter user failed on Exec[add-apt-repository-ppa:ondrej/php]: Only root can execute commands as other users (file: /shared/modules/apt/manifests/ppa.pp, line: 83)[0m
