@@ -8,4 +8,5 @@ puppet module install puppetlabs-mysql
 puppet module install puppetlabs-apache
 puppet module install puppet-php
 puppet module install puppet-alternatives
+puppet module install puppet-cron
 puppet apply /vagrant/spec/fixtures/test.pp

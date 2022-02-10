@@ -1,20 +1,15 @@
-# @summary A short summary of the purpose of this class
+# @summary 
 #
-# A description of what this class does
+# Params Class.
 #
-# @example
-#   include pimcore::params
-class pimcore::params (
-
-  Optional[Stdlib::Absolutepath] $docroot = '/var/www/html/pimcore',
-  Optional[Stdlib::Port] $port            = 80,
-  Optional[String] $php_version           = '8.0',
-  Optional[Hash] $php_settings            = {
-   'Date/date.timezone' => 'Europe/Helsinki',
-   'PHP/memory_limit'   => '512M',
-  },
-
-){
+class pimcore::params {
+  $php_version           = '8.0'
+  $manage_cron           = true
+  $app_name              = 'default'
+  $db_name               = 'pimcore'
+  $docroot               = '/var/www/html/pimcore'
+  $port                  = 80
+  $db_user               = 'pimcore'
   #include ::os::params
 
   case $::osfamily {

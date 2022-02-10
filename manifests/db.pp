@@ -9,11 +9,12 @@ define pimcore::db (
   String $user,
   Variant[String, Sensitive[String]] $password,
   Enum['absent', 'present'] $ensure = 'present',
-  String $dbname                    = $name,
-  String $host                      = '127.0.0.1',
+  String $db_name                   = $name,
+  String $host                      = 'localhost',
   Array  $grant                     = ['ALL'],
 ){
-  mysql::db { $name:
+  mysql::db { $db_name:
+    ensure   => $ensure,
     user     => $user,
     password => $password,
     host     => $host,

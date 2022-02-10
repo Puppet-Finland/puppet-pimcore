@@ -6,11 +6,16 @@
 #   include pimcore
 class pimcore (
 
+  String $admin_user,
   Variant[String, Sensitive[String]] $root_db_pass,
-  Optional[String] $app_name        = 'default',
+  Variant[String, Sensitive[String]] $admin_password,
+  Variant[String, Sensitive[String]] $db_password,
   Enum['absent', 'present'] $ensure = 'present',
+  Optional[String] $app_name        = $pimcore::params::app_name,
+  Optional[String] $db_name         = $pimcore::params::db_name,
   Optional[String] $php_version     = $pimcore::params::php_version,
-  Optional[Hash] $php_settings      = $pimcore::params::php_settings,
+  Optional[String] $db_user         = $pimcore::params::db_user,
+  Optional[Hash] $php_settings      = undef,
   Optional[Hash] $php_extensions    = {
     curl     => {},
     gd       => {},
@@ -55,9 +60,23 @@ class pimcore (
 
   alternatives { 'php':
     path     => "/usr/bin/php${php_version}",
-    require  => Class['::php']
+    require  => [ Class['::php'] ]
   }
 
-  include pimcore::apache
-  include pimcore::install_configs
+  pimcore::db { $db_name:
+    ensure   => $ensure,
+    user     => $db_user,
+    password => $db_password,
+  }
+
+  file { '/opt/pimcore':
+    ensure => 'directory',
+    owner  => 'www-data',
+    group  => 'www-data',
+  }
+
+  contain pimcore::apache
+  contain pimcore::install_project
+  contain pimcore::install_configs
+
 }

@@ -4,13 +4,7 @@
 #
 # @example
 #   include pimcore::apache
-class pimcore::apache (
-
-  Optional[Stdlib::Absolutepath] $docroot = $pimcore::params::docroot,
-  Optional[Stdlib::Port] $port            = $pimcore::params::port,
-
-
-) inherits pimcore::params {
+class pimcore::apache inherits pimcore::params {
   class { '::apache':
     purge_configs => true,
     default_vhost => false,
@@ -23,7 +17,7 @@ class pimcore::apache (
 
   apache::vhost { $facts['fqdn']:
     servername      => $facts['fqdn'],
-    port            => '80',
+    port            => $port,
     docroot         => $docroot,
     directories         => [
       {
