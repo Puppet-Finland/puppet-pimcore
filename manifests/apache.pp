@@ -18,12 +18,18 @@ class pimcore::apache inherits pimcore::params {
   apache::vhost { $facts['fqdn']:
     servername      => $facts['fqdn'],
     port            => $port,
-    docroot         => $docroot,
+    docroot         => "/var/www/html/${app_name}",
     directories         => [
       {
         'path'           => '/',
         'allow_override' => 'All',
       },
     ],
+  }
+
+  file { "/var/www/html/${app_name}":
+    ensure  => 'link',
+    target  => "/opt/pimcore/${app_name}/public",
+    require => Apache::Vhost[$facts['fqdn']],
   }
 }

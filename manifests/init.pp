@@ -1,20 +1,68 @@
-# @summary A short summary of the purpose of this class
+# @summary Install full stack requirements for Pimcore
 #
-# A description of what this class does
+# This installs apache2, mysql-server, and configures/installs all
+# required components that make up a base Pimcore project
 #
 # @example
-#   include pimcore
+#  class { 'pimcore':
+#    root_db_pass   => 'supersecret',
+#    php_settings   => {
+#      'Date/date.timezone' => 'Europe/Helsinki',
+#      'PHP/memory_limit'   => '512M',
+#    },
+#    admin_user     => 'root',
+#    admin_password => 'toor',
+#    db_password    => 'secret',
+#  }
+#
+#  @param admin_user
+#    The admin user required for pimcore-install step. This needs write
+#    access to the project dir and /var.
+#  @param admin_password
+#    The admin password required for pimcore-install step.
+#  @param root_db_pass
+#    The root user password for mysql-server
+#  @param db_user
+#    The user Pimcore uses to interact with the project database.
+#    Default is 'pimcore'. This user has 'ALL' grant permissions.
+#  @param db_password
+#    The user password Pimcore uses to interact with the project database.
+#  @param manage_config
+#    Determines if Pimcore recommended config files will be loaded.
+#    Default is 'true'.
+#  @param app_name
+#    The name of the applicaton. This determines the name of the
+#    project folder located in /opt/pimcore/$app_name.
+#  @param db_name
+#    The name of the of database Pimcore uses.
+#    Default is 'pimcore'.
+#  @param apache_name
+#    The name of the binary used by the OS. 
+#    Default is 'apache2'.
+#  @param php_settings
+#    This is a hash of settings passed to the ::php module.
+#  @param php_extensions
+#    A hash of extension options consumed by ::php module.
+#  @param sql_override
+#    Hash of sql override options consumed by ::mysql module.
+#  @param manage_cron
+#    Boolean for installing maintenance cron job.
+#    Default is 'true'.
+#    
 class pimcore (
 
   String $admin_user,
   Variant[String, Sensitive[String]] $root_db_pass,
   Variant[String, Sensitive[String]] $admin_password,
   Variant[String, Sensitive[String]] $db_password,
+  Optional[Boolean] $manage_config  = true,
   Enum['absent', 'present'] $ensure = 'present',
   Optional[String] $app_name        = $pimcore::params::app_name,
   Optional[String] $db_name         = $pimcore::params::db_name,
   Optional[String] $php_version     = $pimcore::params::php_version,
   Optional[String] $db_user         = $pimcore::params::db_user,
+  Optional[String] $apache_name     = $pimcore::params::apache_name,
+  Optional[Boolean] $manage_cron    = true,
   Optional[Hash] $php_settings      = undef,
   Optional[Hash] $php_extensions    = {
     curl     => {},
@@ -25,6 +73,8 @@ class pimcore (
     zip      => {},
     mbstring => {},
     imagick  => {},
+    pdo      => {},
+    redis    => {},
   },
   Optional[Hash] $sql_override      = {
     'mysqld' => {
@@ -75,8 +125,19 @@ class pimcore (
     group  => 'www-data',
   }
 
+  package { "libapache2-mod-php${php_version}":
+    ensure => installed,
+    require => [ Class['::php'], Class['::apache'] ]
+  }
+
+  package { "redis":
+    ensure => installed
+  }
+
   contain pimcore::apache
-  contain pimcore::install_project
-  contain pimcore::install_configs
+  contain pimcore::project
+  if $manage_config {
+    contain pimcore::config
+  }
 
 }

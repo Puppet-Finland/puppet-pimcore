@@ -1,13 +1,13 @@
-# @summary A short summary of the purpose of this class
+# @summary Installs skeleton and project files
 #
-# A description of what this class does
+# This uses composer to install necessary files to pimcore::app_name
 #
-# @example
-#   include pimcore::install_project
-class pimcore::install_project {
+# @api Private
+# 
+class pimcore::project {
 
   $create_project = [
-    "composer", "create-project",
+    "/usr/local/bin/composer", "create-project",
     "pimcore/skeleton", "/opt/pimcore/${pimcore::app_name}",
   ]
 
@@ -15,12 +15,13 @@ class pimcore::install_project {
     command  => $create_project,
     creates  => "/opt/pimcore/${pimcore::app_name}",
     cwd      => '/opt/pimcore',
-    user     => $web_user,
+    user     => $pimcore::web_user,
     path     => ['/usr/bin', '/usr/local/bin'],
     environment => [ 'COMPOSER_HOME=/opt/pimcore', ],
     require  => [File['/opt/pimcore'], Class['::php']],
   }
 
+# TODO figure out how to get this to install without creating new account
 #    exec { 'install pimcore':
 #      command => './vendor/bin/pimcore-install --no-interaction',
 #      cwd     => "opt/pimcore/${pimcore::app_name}",
@@ -36,7 +37,7 @@ class pimcore::install_project {
 #      require => File["/opt/pimcore/${pimcore::app_name}"],
 #    }
 
-  if $manage_cron {
+  if $pimcore::manage_cron {
     cron::job::multiple { 'maintenance':
         jobs => [
           {
