@@ -3,7 +3,7 @@
 # This uses composer to install necessary files to pimcore::app_name
 #
 # @api Private
-# 
+#
 # TODO fix console permissions
 class pimcore::project {
 
@@ -20,10 +20,12 @@ class pimcore::project {
     path     => ['/usr/bin', '/usr/local/bin'],
     environment => [ 'COMPOSER_HOME=/opt/pimcore', ],
     require  => [File['/opt/pimcore'], Class['::php']],
-  }~>
+  }->
   exec { 'install pimcore':
     command     => "/opt/pimcore/${pimcore::app_name}/vendor/bin/pimcore-install --no-interaction",
     user        => $web_user,
+    logoutput   => true,
+    creates     => "/opt/pimcore/${pimcore::app_name}/var/config/system.yml",
     path        => ['/usr/bin', '/usr/local/bin'],
     environment => [
       'COMPOSER_HOME=/opt/pimcore',
