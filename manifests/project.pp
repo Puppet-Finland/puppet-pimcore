@@ -4,6 +4,7 @@
 #
 # @api Private
 # 
+# TODO fix console permissions
 class pimcore::project {
 
   $create_project = [
@@ -19,25 +20,22 @@ class pimcore::project {
     path     => ['/usr/bin', '/usr/local/bin'],
     environment => [ 'COMPOSER_HOME=/opt/pimcore', ],
     require  => [File['/opt/pimcore'], Class['::php']],
+  }~>
+  exec { 'install pimcore':
+    command     => "/opt/pimcore/${pimcore::app_name}/vendor/bin/pimcore-install --no-interaction",
+    user        => $web_user,
+    path        => ['/usr/bin', '/usr/local/bin'],
+    environment => [
+      'COMPOSER_HOME=/opt/pimcore',
+      "PIMCORE_INSTALL_MYSQL_USERNAME=${pimcore::db_user}",
+      "PIMCORE_INSTALL_MYSQL_PASSWORD=${pimcore::db_password}",
+      "PIMCORE_INSTALL_MYSQL_DATABASE=${pimcore::db_name}",
+      "PIMCORE_INSTALL_ADMIN_USERNAME=${pimcore::admin_user}",
+      "PIMCORE_INSTALL_ADMIN_PASSWORD=${pimcore::admin_password}",
+    ],
   }
 
-# TODO figure out how to get this to install without creating new account
-#    exec { 'install pimcore':
-#      command => './vendor/bin/pimcore-install --no-interaction',
-#      cwd     => "opt/pimcore/${pimcore::app_name}",
-#      user    => $web_user,
-#      path  => ['/usr/bin', '/usr/local/bin'],
-#      environment => [
-#        'COMPOSER_HOME=/opt/pimcore',
-#        "PIMCORE_INSTALL_MYSQL_USERNAME=${pimcore::db_user}",
-#        "PIMCORE_INSTALL_MYSQL_PASSWORD=${pimcore::db_password}",
-#        "PIMCORE_INSTALL_ADMIN_USERNAME=${pimcore::admin_user",
-#        "PIMCORE_INSTALL_ADMIN_PASSWORD=${pimcore::admin_password}",
-#      ],
-#      require => File["/opt/pimcore/${pimcore::app_name}"],
-#    }
-
-  if $pimcore::manage_cron {
+  if ($pimcore::manage_cron) {
     cron::job::multiple { 'maintenance':
         jobs => [
           {

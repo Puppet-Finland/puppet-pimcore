@@ -17,7 +17,8 @@
 #
 #  @param admin_user
 #    The admin user required for pimcore-install step. This needs write
-#    access to the project dir and /var.
+#    access to the project dir and /var. Currently the user will be
+#    created if doesn't exist.
 #  @param admin_password
 #    The admin password required for pimcore-install step.
 #  @param root_db_pass
@@ -88,6 +89,11 @@ class pimcore (
     fail("Unsupported osfamily: ${facts['os']['family']}, module ${module_name} only supports osfamily Debian")
   }
 
+  user { $admin_user:
+    ensure   => present,
+    password => Sensitive($admin_password)
+  }
+
   class { 'mysql::server':
     root_password           => $root_db_pass,
     remove_default_accounts => true,
@@ -106,8 +112,7 @@ class pimcore (
     fpm          => true,
     settings     => $php_settings,
     extensions   => $php_extensions,
-  }
-
+  }~>
   alternatives { 'php':
     path     => "/usr/bin/php${php_version}",
     require  => [ Class['::php'] ]
