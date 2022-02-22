@@ -16,7 +16,7 @@ class pimcore::project {
     command  => $create_project,
     creates  => "/opt/pimcore/${pimcore::app_name}",
     cwd      => '/opt/pimcore',
-    user     => $pimcore::web_user,
+    user     => $pimcore::params::web_user,
     path     => ['/usr/bin', '/usr/local/bin'],
     environment => [ 'COMPOSER_HOME=/opt/pimcore', ],
     require  => [File['/opt/pimcore'], Class['::php']],
