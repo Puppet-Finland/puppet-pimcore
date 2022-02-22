@@ -5,7 +5,7 @@ class pimcore::params {
   $manage_cron           = true
   $app_name              = 'default'
   $db_name               = 'pimcore'
-  $port                  = 80
+  $port                  = '80'
   $db_user               = 'pimcore'
 
   case $::osfamily {

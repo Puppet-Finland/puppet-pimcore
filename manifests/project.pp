@@ -4,7 +4,6 @@
 #
 # @api Private
 #
-# TODO fix console permissions
 class pimcore::project {
 
   $create_project = [
@@ -23,7 +22,7 @@ class pimcore::project {
   }->
   exec { 'install pimcore':
     command     => "/opt/pimcore/${pimcore::app_name}/vendor/bin/pimcore-install --no-interaction",
-    user        => $web_user,
+    user        => $pimcore::params::web_user,
     logoutput   => true,
     creates     => "/opt/pimcore/${pimcore::app_name}/var/config/system.yml",
     path        => ['/usr/bin', '/usr/local/bin'],
@@ -35,6 +34,13 @@ class pimcore::project {
       "PIMCORE_INSTALL_ADMIN_USERNAME=${pimcore::admin_user}",
       "PIMCORE_INSTALL_ADMIN_PASSWORD=${pimcore::admin_password}",
     ],
+  }~>
+  file { "/opt/pimcore/${pimcore::app_name}/bin":
+    ensure  => 'directory',
+    mode    => '0755',
+    owner   => 'www-data',
+    group   => 'www-data',
+    recurse => true,
   }
 
   if ($pimcore::manage_cron) {
