@@ -3,4 +3,42 @@
 ---
 fixtures:
   forge_modules:
-#     stdlib: "puppetlabs/stdlib"
+    alternative:
+      repo: "puppet/alternatives"
+      ref: "4.0.0"
+    apache:
+      repo: "puppetlabs/apache"
+      ref: "7.0.0"
+    apt:
+      repo: "puppetlabs/apt"
+      ref: "8.3.0"
+    archive:
+      repo: "puppet/archive"
+      ref: "6.0.2"
+    concat:
+      repo: "puppetlabs/concat"
+      ref: "7.1.1"
+    cron:
+      repo: "puppet/cron"
+      ref: "3.0.0"
+    cron_core:
+      repo: "puppetlabs/cron_core"
+      ref: "1.1.0"
+    inifile:
+      repo: "puppetlabs/inifile"
+      ref: "5.2.0"
+    inifile:
+      repo: "puppetlabs/inifile"
+      ref: "5.2.0"
+    inifile:
+      repo: "puppetlabs/inifile"
+      ref: "5.2.0"
+    mysql:
+      repo: "puppetlabs/mysql"
+      ref: "12.0.1"
+    php:
+      repo: "puppet/php"
+      ref: "8.0.2"
+    stdlib:
+      repo: "puppetlabs/stdlib"
+      ref: "8.1.0"

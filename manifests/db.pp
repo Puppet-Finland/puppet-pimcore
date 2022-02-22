@@ -9,7 +9,7 @@ define pimcore::db (
   String $user,
   Variant[String, Sensitive[String]] $password,
   Enum['absent', 'present'] $ensure = 'present',
-  String $db_name                   = $name,
+  String $db_name                   = 'pimcore',
   String $host                      = 'localhost',
   Array  $grant                     = ['ALL'],
 ){
