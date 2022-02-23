@@ -43,6 +43,14 @@ class pimcore::project {
     recurse => true,
   }
 
+  file { "/var/lib/php/sessions":
+    ensure  => 'directory',
+    mode    => '0655',
+    owner   => 'www-data',
+    group   => 'www-data',
+    recurse => true,
+  }
+
   if ($pimcore::manage_cron) {
     cron::job::multiple { 'maintenance':
         jobs => [
