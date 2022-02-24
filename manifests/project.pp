@@ -43,12 +43,20 @@ class pimcore::project {
     recurse => true,
   }
 
+  file { '/var/lib/php':
+    ensure  => 'directory',
+    mode    => '0755',
+    owner   => 'root',
+    group   => 'root',
+  }
+
   file { "/var/lib/php/sessions":
     ensure  => 'directory',
     mode    => '0655',
     owner   => 'www-data',
     group   => 'www-data',
     recurse => true,
+    require => File['/var/lib/php'],
   }
 
   if ($pimcore::manage_cron) {
