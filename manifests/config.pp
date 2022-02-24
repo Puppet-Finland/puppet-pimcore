@@ -4,13 +4,11 @@
 #
 # @api Private
 #
-# TODO make templates dynamic as needed
-#
 class pimcore::config {
   file { '/etc/profile.d/pimcore.sh':
-     ensure  => file,
-     owner   => 'root',
-     content => template('pimcore/pimcore.sh')
+    ensure  => file,
+    owner   => 'root',
+    content => template('pimcore/pimcore.sh')
   }
 
   file { '/etc/redis/redis.conf':

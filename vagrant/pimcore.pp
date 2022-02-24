@@ -58,8 +58,8 @@ class { '::php':
   dev        => false,
   fpm        => true,
   settings   => {
-   'Date/date.timezone' => 'Europe/Helsinki',
-   'PHP/memory_limit'   => '512M',
+    'Date/date.timezone' => 'Europe/Helsinki',
+    'PHP/memory_limit'   => '512M',
   },
   extensions => {
     curl     => {},
@@ -119,7 +119,6 @@ apache::vhost { $facts['fqdn']:
   ],
 }
 
-# TODO Verify Security
 file { '/opt/pimcore':
   ensure => 'directory',
   owner  => 'www-data',

@@ -38,7 +38,7 @@
 #    The name of the of database Pimcore uses.
 #    Default is 'pimcore'.
 #  @param apache_name
-#    The name of the binary used by the OS. 
+#    The name of the binary used by the OS.
 #    Default is 'apache2'.
 #  @param php_settings
 #    This is a hash of settings passed to the ::php module.
@@ -49,7 +49,7 @@
 #  @param manage_cron
 #    Boolean for installing maintenance cron job.
 #    Default is 'true'.
-#    
+#
 class pimcore (
 
   String $admin_user,
