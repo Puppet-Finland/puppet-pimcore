@@ -15,14 +15,26 @@ class pimcore::project {
     command  => $create_project,
     creates  => "/opt/pimcore/${pimcore::app_name}",
     cwd      => '/opt/pimcore',
-    user     => $pimcore::params::web_user,
+    user     => 'root',
     path     => ['/usr/bin', '/usr/local/bin'],
     environment => [ 'COMPOSER_HOME=/opt/pimcore', ],
     require  => [File['/opt/pimcore'], Class['::php']],
-  }->
+    before   => File["/opt/pimcore/${pimcore::app_name}/vendor"]
+  }
+
+  file { "/opt/pimcore/${pimcore::app_name}/vendor":
+    ensure  => 'directory',
+    mode    => '0755',
+    owner   => 'www-data',
+    group   => 'www-data',
+    recurse => true,
+    require => Exec['install pimcore project skeleton'],
+    before  => Exec['install pimcore']
+  }
+
   exec { 'install pimcore':
     command     => "/opt/pimcore/${pimcore::app_name}/vendor/bin/pimcore-install --no-interaction",
-    user        => $pimcore::params::web_user,
+    user        => 'root',
     logoutput   => true,
     creates     => "/opt/pimcore/${pimcore::app_name}/var/config/system.yml",
     path        => ['/usr/bin', '/usr/local/bin'],
@@ -34,13 +46,36 @@ class pimcore::project {
       "PIMCORE_INSTALL_ADMIN_USERNAME=${pimcore::admin_user}",
       "PIMCORE_INSTALL_ADMIN_PASSWORD=${pimcore::admin_password}",
     ],
-  }~>
+    require => File["/opt/pimcore/${pimcore::app_name}/vendor"]
+  }
+
+  file { "/opt/pimcore/${pimcore::app_name}/var":
+    ensure   => 'directory',
+    mode     => '0755',
+    owner    => $pimcore::params::web_user,
+    group    => $pimcore::params::web_user,
+    recurse  => true,
+    require  => Exec['install pimcore'],
+    notify   => Service[$pimcore::params::apache_name]
+  }
+
+  file { "/opt/pimcore/${pimcore::app_name}/public":
+    ensure   => 'directory',
+    mode     => '0755',
+    owner    => $pimcore::params::web_user,
+    group    => $pimcore::params::web_user,
+    recurse  => true,
+    require  => Exec['install pimcore'],
+    notify   => Service[$pimcore::params::apache_name]
+  }
+
   file { "/opt/pimcore/${pimcore::app_name}/bin":
     ensure  => 'directory',
     mode    => '0755',
-    owner   => 'www-data',
+    owner   => 'root',
     group   => 'www-data',
     recurse => true,
+    require => Exec['install pimcore']
   }
 
   file { '/var/lib/php':
