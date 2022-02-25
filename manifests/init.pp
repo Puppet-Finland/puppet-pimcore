@@ -126,8 +126,8 @@ class pimcore (
 
   file { '/opt/pimcore':
     ensure => 'directory',
-    owner  => 'www-data',
-    group  => 'www-data',
+    owner  => 'root',
+    group  => 'root',
   }
 
   package { "libapache2-mod-php${php_version}":
