@@ -17,7 +17,7 @@ class pimcore::project {
     cwd      => '/opt/pimcore',
     user     => 'root',
     path     => ['/usr/bin', '/usr/local/bin'],
-    environment => [ 'COMPOSER_HOME=/opt/pimcore', ],
+    environment => [ 'COMPOSER_HOME=/opt/pimcore', 'COMPOSER_ALLOW_SUPERUSER=1'],
     require  => [File['/opt/pimcore'], Class['::php']],
     before   => File["/opt/pimcore/${pimcore::app_name}/vendor"]
   }
