@@ -94,6 +94,22 @@ class pimcore::project {
     require => File['/var/lib/php'],
   }
 
+  file { "/root/install_composer.sh":
+    ensure  => 'present',
+    mode    => '0755',
+    owner   => 'root',
+    group   => 'root',
+    content => template('pimcore/install_composer.sh'),
+    before  => Exec['/root/install_composer.sh']
+  }
+
+  exec { '/root/install_composer.sh':
+    creates   => '/usr/local/bin/composer',
+    user      => 'root',
+    logoutput => true,
+    require   => [Class['::php'], File['/root/install_composer.sh']],
+  }
+
   if ($pimcore::manage_cron) {
     cron::job::multiple { 'maintenance':
         jobs => [
