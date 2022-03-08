@@ -17,7 +17,7 @@ class pimcore::project {
     cwd      => '/opt/pimcore',
     user     => 'root',
     path     => ['/usr/bin', '/usr/local/bin'],
-    environment => [ 'COMPOSER_HOME=/opt/pimcore', ],
+    environment => [ 'COMPOSER_HOME=/opt/pimcore', 'COMPOSER_ALLOW_SUPERUSER=1'],
     require  => [File['/opt/pimcore'], Class['::php']],
     before   => File["/opt/pimcore/${pimcore::app_name}/vendor"]
   }
@@ -92,6 +92,22 @@ class pimcore::project {
     group   => 'www-data',
     recurse => true,
     require => File['/var/lib/php'],
+  }
+
+  file { "/root/install_composer.sh":
+    ensure  => 'present',
+    mode    => '0755',
+    owner   => 'root',
+    group   => 'root',
+    content => template('pimcore/install_composer.sh'),
+    before  => Exec['/root/install_composer.sh']
+  }
+
+  exec { '/root/install_composer.sh':
+    creates   => '/usr/local/bin/composer',
+    user      => 'root',
+    logoutput => true,
+    require   => [Class['::php'], File['/root/install_composer.sh']],
   }
 
   if ($pimcore::manage_cron) {

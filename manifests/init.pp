@@ -107,7 +107,7 @@ class pimcore (
   }->
   class { '::php':
     manage_repos => true,
-    composer     => true,
+    composer     => false,
     dev          => false,
     fpm          => true,
     settings     => $php_settings,
