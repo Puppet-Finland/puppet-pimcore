@@ -12,14 +12,14 @@ class pimcore::project {
   ]
 
   exec { 'install pimcore project skeleton':
-    command  => $create_project,
-    creates  => "/opt/pimcore/${pimcore::app_name}",
-    cwd      => '/opt/pimcore',
-    user     => 'root',
-    path     => ['/usr/bin', '/usr/local/bin'],
+    command     => $create_project,
+    creates     => "/opt/pimcore/${pimcore::app_name}",
+    cwd         => '/opt/pimcore',
+    user        => 'root',
+    path        => ['/usr/bin', '/usr/local/bin'],
     environment => [ 'COMPOSER_HOME=/opt/pimcore', 'COMPOSER_ALLOW_SUPERUSER=1'],
-    require  => [File['/opt/pimcore'], Class['::php']],
-    before   => File["/opt/pimcore/${pimcore::app_name}/vendor"]
+    require     => [File['/opt/pimcore'], Exec['/root/install_composer.sh']],
+    before      => File["/opt/pimcore/${pimcore::app_name}/vendor"],
   }
 
   file { "/opt/pimcore/${pimcore::app_name}/vendor":
@@ -104,10 +104,12 @@ class pimcore::project {
   }
 
   exec { '/root/install_composer.sh':
-    creates   => '/usr/local/bin/composer',
-    user      => 'root',
-    logoutput => true,
-    require   => [Class['::php'], File['/root/install_composer.sh']],
+    creates     => '/usr/local/bin/composer',
+    user        => 'root',
+    logoutput   => true,
+    path        => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin',
+    environment => [ 'COMPOSER_HOME=/root/.composer' ],
+    require     => [Class['::php'], File['/root/install_composer.sh']],
   }
 
   if ($pimcore::manage_cron) {

@@ -49,23 +49,33 @@
 #  @param manage_cron
 #    Boolean for installing maintenance cron job.
 #    Default is 'true'.
-#
+#  @param ssl_cert
+#    The ssl cert to use for apache.
+#    Default is '/etc/letsencrypt/live/${pimcore::params::dnsname}/cert.pem'
+#  @param ssl_key
+#    The ssl key to use for apache.
+#    Default is '/etc/letsencrypt/live/${pimcore::params::dnsname}/privkey.pem'
+#  @param ssl_chain
+#    The ssl chain to use for apache.
+#    Default is '/etc/letsencrypt/live/${pimcore::params::dnsname}/fullchain.pem'
 class pimcore (
-
   String $admin_user,
   Variant[String, Sensitive[String]] $root_db_pass,
   Variant[String, Sensitive[String]] $admin_password,
   Variant[String, Sensitive[String]] $db_password,
-  Optional[Boolean] $manage_config  = true,
-  Enum['absent', 'present'] $ensure = 'present',
-  Optional[String] $app_name        = $pimcore::params::app_name,
-  Optional[String] $db_name         = $pimcore::params::db_name,
-  Optional[String] $php_version     = $pimcore::params::php_version,
-  Optional[String] $db_user         = $pimcore::params::db_user,
-  Optional[String] $apache_name     = $pimcore::params::apache_name,
-  Optional[Boolean] $manage_cron    = true,
-  Optional[Hash] $php_settings      = undef,
-  Optional[Hash] $php_extensions    = {
+  Optional[Boolean] $manage_config          = true,
+  Enum['absent', 'present'] $ensure         = 'present',
+  Optional[String] $app_name                = $pimcore::params::app_name,
+  Optional[String] $db_name                 = $pimcore::params::db_name,
+  Optional[String] $php_version             = $pimcore::params::php_version,
+  Optional[String] $db_user                 = $pimcore::params::db_user,
+  Optional[String] $apache_name             = $pimcore::params::apache_name,
+  Optional[Stdlib::Absolutepath] $ssl_cert  = $pimcore::params::ssl_cert,
+  Optional[Stdlib::Absolutepath] $ssl_key   = $pimcore::params::ssl_key,
+  Optional[Stdlib::Absolutepath] $ssl_chain = $pimcore::params::ssl_chain,
+  Optional[Boolean] $manage_cron            = true,
+  Optional[Hash] $php_settings              = undef,
+  Optional[Hash] $php_extensions            = {
     curl     => {},
     gd       => {},
     intl     => {},
@@ -77,7 +87,7 @@ class pimcore (
     pdo      => {},
     redis    => {},
   },
-  Optional[Hash] $sql_override      = {
+  Optional[Hash] $sql_override             = {
     'mysqld' => {
       'bind-address' => '127.0.0.1',
     },
