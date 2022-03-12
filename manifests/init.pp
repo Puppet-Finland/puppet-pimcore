@@ -15,6 +15,9 @@
 #    db_password    => 'secret',
 #  }
 #
+#  @param git_url
+#    The URL to Pimcore repository. If not defined, install Pimcore from the
+#    pimcore project skeleton.
 #  @param admin_user
 #    The admin user required for pimcore-install step. This needs write
 #    access to the project dir and /var. Currently the user will be
@@ -65,6 +68,7 @@ class pimcore (
   Variant[String, Sensitive[String]] $db_password,
   Optional[Boolean] $manage_config          = true,
   Enum['absent', 'present'] $ensure         = 'present',
+  Optional[String] $git_url                 = undef,
   Optional[String] $app_name                = $pimcore::params::app_name,
   Optional[String] $db_name                 = $pimcore::params::db_name,
   Optional[String] $php_version             = $pimcore::params::php_version,
