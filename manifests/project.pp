@@ -27,8 +27,7 @@ class pimcore::project {
   }
 
   if $::pimcore::git_url {
-    $pimcore_require = Vcsrepo[$project_dir]
-    $pimcore_install_require = Exec['composer install'] 
+    $pimcore_require = Exec['composer install']
 
     vcsrepo { $project_dir:
       ensure   => 'present',
@@ -61,7 +60,6 @@ class pimcore::project {
     }
   } else {
     $pimcore_require = Exec['install pimcore project skeleton']
-    $pimcore_install_require = Exec['install pimcore project skeleton']
 
     $create_project = [
       "/usr/local/bin/composer", "create-project",
@@ -80,14 +78,14 @@ class pimcore::project {
     }
   }
 
-  file { "${project_dir}/vendor":
-    ensure  => 'directory',
-    mode    => '0755',
-    owner   => 'www-data',
-    group   => 'www-data',
-    recurse => true,
-    require => $pimcore_require,
-    before  => Exec['install pimcore']
+  exec { 'set vendor permissions':
+    command     => "chown --changes -R ${::pimcore::params::web_user}:${::pimcore::params::web_user} ${project_dir}/vendor",
+    user        => 'root',
+    path        => ['/usr/bin', '/usr/local/bin'],
+    refreshonly => true,
+    require     => $pimcore_require,
+    subscribe   => $pimcore_require,
+    before      => Exec['install pimcore']
   }
 
   exec { 'install pimcore':
@@ -104,17 +102,16 @@ class pimcore::project {
       "PIMCORE_INSTALL_ADMIN_USERNAME=${pimcore::admin_user}",
       "PIMCORE_INSTALL_ADMIN_PASSWORD=${pimcore::admin_password}",
     ],
-    require => [File["${project_dir}/vendor"],$pimcore_install_require],
+    require     => [Exec['set vendor permissions'], $pimcore_require],
+    notify      => Exec['set pimcore permissions'], 
   }
 
-  file { "${project_dir}/public":
-    ensure   => 'directory',
-    mode     => '0755',
-    owner    => $pimcore::params::web_user,
-    group    => $pimcore::params::web_user,
-    recurse  => true,
-    require  => Exec['install pimcore'],
-    notify   => Service[$pimcore::params::apache_name]
+  exec { 'set pimcore permissions':
+    command     => "chown -R ${::pimcore::params::web_user}:${::pimcore::params::web_user} ${project_dir}/public ${project_dir}/var",
+    user        => 'root',
+    path        => ['/usr/bin', '/usr/local/bin'],
+    refreshonly => true,
+    require     => Exec['install pimcore'],
   }
 
   file { "${project_dir}/bin":
@@ -124,16 +121,6 @@ class pimcore::project {
     group   => 'www-data',
     recurse => true,
     require => Exec['install pimcore']
-  }
-
-  file { "${project_dir}/var":
-    ensure   => 'directory',
-    mode     => '0755',
-    owner    => $pimcore::params::web_user,
-    group    => $pimcore::params::web_user,
-    recurse  => true,
-    require  => Exec['install pimcore'],
-    notify   => Service[$pimcore::params::apache_name]
   }
 
   file { '/var/lib/php':
