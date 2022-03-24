@@ -3,11 +3,6 @@
 # @example
 #   include pimcore::apache
 class pimcore::apache {
-  if (versioncmp($pimcore::params::php_version, '8.1') < 0) {
-    $mod = "php${pimcore::params::php_version}"
-  } else {
-    $mod = "php"
-  }
 
   class { '::apache':
     purge_configs => true,
@@ -16,7 +11,8 @@ class pimcore::apache {
   }-> # Hack to get version 8.0 loaded
   exec { "a2enmod php":
     command => "/usr/sbin/a2enmod ${mod}",
-    require => Class['::php']
+    require => Class['::php'],
+    notify  => Class['::apache'],
   }
   # Currently there is a bug where 8.0 is considered the latest and the
   # php name gets messed up
