@@ -8,17 +8,14 @@ class pimcore::apache {
     purge_configs => true,
     default_vhost => false,
     mpm_module    => 'prefork',
-  }-> # Hack to get version 8.0 loaded
-  exec { "a2enmod php":
-    command => "/usr/sbin/a2enmod ${mod}",
-    require => Class['::php'],
-    notify  => Class['::apache'],
   }
-  # Currently there is a bug where 8.0 is considered the latest and the
-  # php name gets messed up
-  # class { '::apache::mod::php':
-  #   php_version => $pimcore::params::php_version,
-  # }
+
+  include ::apache::mod::prefork
+
+  class { '::apache::mod::php':
+    php_version => $::pimcore::params::php_version,
+    path        => '/usr/lib/apache2/modules/libphp8.0.so',
+  }
 
   include ::apache::mod::headers
   include ::apache::mod::rewrite
