@@ -43,7 +43,7 @@ class pimcore::apache {
       'options'        => ['FollowSymlinks']
       },
     ],
-    require     => File["/var/www/html/${pimcore::app_name}"]
+    require     => [Package['libapache2-mod-php8.0'], File["/var/www/html/${pimcore::app_name}"] ]
   }
 }
 
