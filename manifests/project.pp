@@ -132,9 +132,9 @@ class pimcore::project {
 
   file { "/var/lib/php/sessions":
     ensure  => 'directory',
-    mode    => '1733',
-    owner   => 'root',
-    group   => 'root',
+    mode    => '0655',
+    owner   => 'www-data',
+    group   => 'www-data',
     recurse => true,
     require => File['/var/lib/php'],
   }
