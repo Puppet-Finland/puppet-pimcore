@@ -8,7 +8,7 @@ class pimcore::project {
 
   $project_dir = "/opt/pimcore/${::pimcore::app_name}"
 
-  file { "/root/install_composer.sh":
+  file { '/root/install_composer.sh':
     ensure  => 'present',
     mode    => '0755',
     owner   => 'root',
@@ -62,8 +62,8 @@ class pimcore::project {
     $pimcore_require = Exec['install pimcore project skeleton']
 
     $create_project = [
-      "/usr/local/bin/composer", "create-project",
-      "pimcore/skeleton", $project_dir,
+      '/usr/local/bin/composer', 'create-project',
+      'pimcore/skeleton', $project_dir,
     ]
 
     exec { 'install pimcore project skeleton':
@@ -74,7 +74,7 @@ class pimcore::project {
       path        => ['/usr/bin', '/usr/local/bin'],
       environment => [ 'COMPOSER_HOME=/opt/pimcore', 'COMPOSER_ALLOW_SUPERUSER=1'],
       require     => [File['/opt/pimcore'], Exec['/root/install_composer.sh']],
-      before      => File["/opt/pimcore/${pimcore::app_name}/vendor"],
+      before      => File["/opt/pimcore/${::pimcore::app_name}/vendor"],
     }
   }
 
@@ -96,14 +96,14 @@ class pimcore::project {
     path        => ['/usr/bin', '/usr/local/bin'],
     environment => [
       'COMPOSER_HOME=/opt/pimcore',
-      "PIMCORE_INSTALL_MYSQL_USERNAME=${pimcore::db_user}",
-      "PIMCORE_INSTALL_MYSQL_PASSWORD=${pimcore::db_password}",
-      "PIMCORE_INSTALL_MYSQL_DATABASE=${pimcore::db_name}",
-      "PIMCORE_INSTALL_ADMIN_USERNAME=${pimcore::admin_user}",
-      "PIMCORE_INSTALL_ADMIN_PASSWORD=${pimcore::admin_password}",
+      "PIMCORE_INSTALL_MYSQL_USERNAME=${::pimcore::db_user}",
+      "PIMCORE_INSTALL_MYSQL_PASSWORD=${::pimcore::db_password}",
+      "PIMCORE_INSTALL_MYSQL_DATABASE=${::pimcore::db_name}",
+      "PIMCORE_INSTALL_ADMIN_USERNAME=${::pimcore::admin_user}",
+      "PIMCORE_INSTALL_ADMIN_PASSWORD=${::pimcore::admin_password}",
     ],
     require     => [Exec['set vendor permissions'], $pimcore_require],
-    notify      => Exec['set pimcore permissions'], 
+    notify      => Exec['set pimcore permissions'],
   }
 
   exec { 'set pimcore permissions':
@@ -124,13 +124,13 @@ class pimcore::project {
   }
 
   file { '/var/lib/php':
-    ensure  => 'directory',
-    mode    => '0755',
-    owner   => 'root',
-    group   => 'root',
+    ensure => 'directory',
+    mode   => '0755',
+    owner  => 'root',
+    group  => 'root',
   }
 
-  file { "/var/lib/php/sessions":
+  file { '/var/lib/php/sessions':
     ensure  => 'directory',
     mode    => '0655',
     owner   => 'www-data',
@@ -141,27 +141,27 @@ class pimcore::project {
 
   if ($pimcore::manage_cron) {
     cron::job::multiple { 'maintenance':
-        jobs => [
-          {
-            minute  => '*/5',
-            hour    => '*',
-            date    => '*',
-            month   => '*',
-            weekday => '*',
-            user    => 'www-data',
-            command => '/opt/pimcore/bin/console pimcore:maintenance',
-          },
-          {
-            command => '/opt/pimcore/bin/console messenger:consume pimcore_core pimcore_maintenance --time-limit=300',
-            minute  => '*/5',
-            hour    => '*',
-            date    => '*',
-            month   => '*',
-            weekday => '*',
-            user    => 'www-data',
-          }
-        ]
-      }
+      jobs => [
+        {
+          minute  => '*/5',
+          hour    => '*',
+          date    => '*',
+          month   => '*',
+          weekday => '*',
+          user    => 'www-data',
+          command => '/opt/pimcore/bin/console pimcore:maintenance',
+        },
+        {
+          command => '/opt/pimcore/bin/console messenger:consume pimcore_core pimcore_maintenance --time-limit=300',
+          minute  => '*/5',
+          hour    => '*',
+          date    => '*',
+          month   => '*',
+          weekday => '*',
+          user    => 'www-data',
+        }
+      ]
     }
   }
+}
 

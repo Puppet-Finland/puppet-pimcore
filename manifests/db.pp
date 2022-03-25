@@ -13,7 +13,7 @@ define pimcore::db (
   String $host                      = 'localhost',
   Array  $grant                     = ['ALL'],
 ){
-  mysql::db { $db_name:
+  ::mysql::db { $db_name:
     ensure   => $ensure,
     user     => $user,
     password => $password,

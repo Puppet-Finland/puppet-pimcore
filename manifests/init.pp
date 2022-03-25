@@ -108,7 +108,7 @@ class pimcore (
     password => Sensitive($admin_password)
   }
 
-  class { 'mysql::server':
+  class { '::mysql::server':
     root_password           => $root_db_pass,
     remove_default_accounts => true,
     restart                 => true,
@@ -118,21 +118,21 @@ class pimcore (
   class { '::php::globals':
     php_version => $php_version,
     config_root => "/etc/php/${php_version}",
-  }->
-  class { '::php':
+  }
+  -> class { '::php':
     manage_repos => true,
     composer     => false,
     dev          => false,
     fpm          => true,
     settings     => $php_settings,
     extensions   => $php_extensions,
-  }~>
-  alternatives { 'php':
-    path     => "/usr/bin/php${php_version}",
-    require  => [ Class['::php'] ]
+  }
+  ~> alternatives { 'php':
+    path    => "/usr/bin/php${php_version}",
+    require => [ Class['::php'] ]
   }
 
-  pimcore::db { $db_name:
+  ::pimcore::db { $db_name:
     ensure   => $ensure,
     user     => $db_user,
     password => $db_password,
@@ -145,18 +145,17 @@ class pimcore (
   }
 
   package { "libapache2-mod-php${php_version}":
-    ensure => installed,
+    ensure  => installed,
     require => [ Class['::php'], Class['::apache'] ]
   }
 
-  package { "redis":
+  package { 'redis':
     ensure => installed
   }
 
-  contain pimcore::apache
-  contain pimcore::project
+  contain ::pimcore::apache
+  contain ::pimcore::project
   if $manage_config {
-    contain pimcore::config
+    contain ::pimcore::config
   }
-
 }

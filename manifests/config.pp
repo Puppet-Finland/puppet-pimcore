@@ -18,7 +18,7 @@ class pimcore::config {
     require => Package['redis']
   }
 
-  file { "/etc/php/${pimcore::php_version}/${pimcore::apache_name}/php.ini":
+  file { "/etc/php/${::pimcore::php_version}/${::pimcore::apache_name}/php.ini":
     ensure  => file,
     owner   => root,
     content => template('pimcore/php.ini'),

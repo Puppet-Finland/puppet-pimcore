@@ -20,30 +20,30 @@ class pimcore::apache {
   include ::apache::mod::headers
   include ::apache::mod::rewrite
   include ::apache::mod::ssl
-  apache::listen { $pimcore::params::port: }
+  ::apache::listen { $::pimcore::params::port: }
 
-  file { "/var/www/html/${pimcore::app_name}":
-    ensure  => 'link',
-    target  => "/opt/pimcore/${pimcore::app_name}/public",
+  file { "/var/www/html/${::pimcore::app_name}":
+    ensure => 'link',
+    target => "/opt/pimcore/${::pimcore::app_name}/public",
   }
 
-  apache::vhost { 'pimcore':
+  ::apache::vhost { 'pimcore':
     ssl         => true,
-    ssl_cert    => $pimcore::ssl_cert,
-    ssl_key     => $pimcore::ssl_key,
-    ssl_chain   => $pimcore::ssl_chain,
+    ssl_cert    => $::pimcore::ssl_cert,
+    ssl_key     => $::pimcore::ssl_key,
+    ssl_chain   => $::pimcore::ssl_chain,
     port        => '443',
-    servername  => $pimcore::params::dnsname,
-    notify      => Service[$pimcore::params::apache_name],
-    docroot     => "/var/www/html/${pimcore::app_name}",
+    servername  => $::pimcore::params::dnsname,
+    notify      => Service[$::pimcore::params::apache_name],
+    docroot     => "/var/www/html/${::pimcore::app_name}",
     directories => [
       {
-      'path'           => "/var/www/html/${pimcore::app_name}",
+      'path'           => "/var/www/html/${::pimcore::app_name}",
       'allow_override' => ['All'],
       'options'        => ['FollowSymlinks']
       },
     ],
-    require     => [Package['libapache2-mod-php8.0'], File["/var/www/html/${pimcore::app_name}"] ]
+    require     => [Package['libapache2-mod-php8.0'], File["/var/www/html/${::pimcore::app_name}"] ]
   }
 }
 
