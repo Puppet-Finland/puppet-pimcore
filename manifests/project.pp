@@ -74,7 +74,6 @@ class pimcore::project {
       path        => ['/usr/bin', '/usr/local/bin'],
       environment => [ 'COMPOSER_HOME=/opt/pimcore', 'COMPOSER_ALLOW_SUPERUSER=1'],
       require     => [File['/opt/pimcore'], Exec['/root/install_composer.sh']],
-      before      => File["/opt/pimcore/${::pimcore::app_name}/vendor"],
     }
   }
 
