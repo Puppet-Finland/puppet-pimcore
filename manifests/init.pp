@@ -136,12 +136,13 @@ class pimcore (
     config_root => "/etc/php/${php_version}",
   }
   -> class { '::php':
-    manage_repos => true,
-    composer     => false,
-    dev          => false,
-    fpm          => true,
-    settings     => $php_settings,
-    extensions   => $php_extensions,
+    manage_repos  => true,
+    apache_config => true,
+    composer      => false,
+    dev           => false,
+    fpm           => true,
+    settings      => $php_settings,
+    extensions    => $php_extensions,
   }
   ~> alternatives { 'php':
     path    => "/usr/bin/php${php_version}",
@@ -158,11 +159,6 @@ class pimcore (
     ensure => 'directory',
     owner  => 'root',
     group  => 'root',
-  }
-
-  package { "libapache2-mod-php${php_version}":
-    ensure  => installed,
-    require => [ Class['::php'], Class['::apache'] ]
   }
 
   package { 'redis':

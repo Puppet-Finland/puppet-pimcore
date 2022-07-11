@@ -12,6 +12,11 @@ class pimcore::apache {
 
   include ::apache::mod::prefork
 
+  package { "libapache2-mod-php${php_version}":
+    ensure => 'installed',
+    before => Class['php'],
+  }
+
   class { '::apache::mod::php':
     php_version => $::pimcore::params::php_version,
     path        => '/usr/lib/apache2/modules/libphp8.0.so',
