@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     box.vbguest.installer_options = { allow_kernel_upgrade: true }
     box.vm.hostname = 'pimcore.virtual'
     box.vm.synced_folder '.', '/vagrant', type: "virtualbox"
-    box.vm.network "private_network", ip: "192.168.154.13"
+    box.vm.network "private_network", ip: "192.168.56.71"
     box.vm.network "forwarded_port", guest: 80, host: 8080
     box.vm.provider 'virtualbox' do |vb|
       vb.gui = false
