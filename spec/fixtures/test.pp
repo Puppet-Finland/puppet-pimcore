@@ -7,4 +7,6 @@ class { 'pimcore':
   admin_user     => 'root',
   admin_password => 'toor',
   db_password    => 'secret',
+  ssl            => false,
+  port           => 80,
 }

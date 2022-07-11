@@ -52,6 +52,10 @@
 #  @param manage_cron
 #    Boolean for installing maintenance cron job.
 #    Default is 'true'.
+#  @param port
+#    Port to use with Apache.
+#  @param ssl
+#    Whether to enable SSL in Apache.
 #  @param ssl_cert
 #    The ssl cert to use for apache.
 #    Default is '/etc/letsencrypt/live/${pimcore::params::dnsname}/cert.pem'
@@ -74,6 +78,8 @@ class pimcore (
   Optional[String] $php_version             = $pimcore::params::php_version,
   Optional[String] $db_user                 = $pimcore::params::db_user,
   Optional[String] $apache_name             = $pimcore::params::apache_name,
+  Integer[1,65535] $port                    = $pimcore::params::port,
+  Boolean          $ssl                     = $pimcore::params::ssl,
   Optional[Stdlib::Absolutepath] $ssl_cert  = $pimcore::params::ssl_cert,
   Optional[Stdlib::Absolutepath] $ssl_key   = $pimcore::params::ssl_key,
   Optional[Stdlib::Absolutepath] $ssl_chain = $pimcore::params::ssl_chain,
@@ -101,6 +107,16 @@ class pimcore (
 
   if ! ($facts['os']['family'] in ['Debian']) {
     fail("Unsupported osfamily: ${facts['os']['family']}, module ${module_name} only supports osfamily Debian")
+  }
+
+  # Do some basic sanity checking. These should fail only in the case the admin
+  # attempts to do very interesting configurations.
+  if (($port == 443) and ($ssl == false)) {
+    fail('ERROR: set $ssl to true when $port is 443')
+  }
+
+  if (($port == 80) and ($ssl == true)) {
+    fail('ERROR: set $ssl to false when $port is 80')
   }
 
   user { $admin_user:
